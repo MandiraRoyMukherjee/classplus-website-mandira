@@ -1,0 +1,731 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Page Title</title> 
+     <script src=" https://kit.fontawesome.com/a076d05399.js"> 
+    </script> 
+    <style> 
+     * {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Hind Vadodara", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica Neue, Arial, sans-serif;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.main {
+  height: calc(100% - 50px);
+  display: flex;
+  flex: 1;
+}
+.sidebar {
+  height: 100%;
+  width: 290px;
+  box-sizing: border-box;
+  box-shadow: 0 0 2rem 0 rgb(0 0 0 / 5%);
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+.container.nav-closed .sidebar,
+.container.nav-closed .header-logo {
+  width: 0;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+}
+.sidebar ul li a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  white-space: nowrap;
+}
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background: #e8ecef;
+}
+.sidebar ul li span {
+  margin-left: 16px;
+  font-size: 16px;
+  font-weight: 100;
+}
+.sidebar ul li i {
+  font-size: 18px;
+  color: #111;
+  font-weight: normal;
+}
+.header {
+  height: 50px;
+  background: #303f9f;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+}
+.sidebar ul li a.active i {
+  color: #303f9e;
+}
+.site-logo {
+  height: 32px;
+  width: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  margin: 0 18px 0 15px;
+}
+.site-logo path {
+  fill: #fff;
+}
+.site-title {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.page-content {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+}
+.page-content h1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+}
+.header-search {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding: 0 20px;
+  flex: 1;
+}
+.header-search .button-menu {
+  width: 28px;
+  height: 28px;
+  margin-right: 15px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+.header-search input[type="search"] {
+  height: 100%;
+  width: 300px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 100;
+  background: none;
+  border: none;
+  color: #fff;
+}
+.header-search input[type="search"]:focus {
+  outline: none;
+}
+.header-search input[type="search"]::placeholder {
+  color: #ccc;
+}
+.header-search .button-menu:focus {
+  outline: none;
+  border: none;
+}
+.header-search .button-menu svg path {
+  fill: #fff;
+}
+@media screen and (max-width: 991px) {
+  .page-content {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-logo {
+    display: none;
+  }
+}
+
+/* Styles for wrapping the search box */
+
+.search {
+    width: 60%;
+    border-radius: 14px;
+    height: 45px;
+  }
+  
+
+  /* The Modal (background) */
+.modal {
+    /* display: none; Hidden by default
+    position: fixed; Stay in place */
+    display: none;
+    padding-left: 560px;
+    padding-right: 560px;
+    padding-top: 100px;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    /* width: 50%; */
+    height: 470px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #wrap {
+    display: flex;
+    align-items: center;
+    /* margin: 10px; */
+  }
+  .icon:before {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid blue;
+    font-size: 30px;
+    color: blue;
+  }
+  
+  #plus:before {
+    content: '+';
+  }
+  #bigplus:before {
+    content: '\FF0B';
+  }
+
+  .icon1{
+      margin: 0 auto;
+  }
+  
+  /* .dialog{ */
+    /* width: 50px;
+    margin-top: 100px; */
+  /* } */
+
+  /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: rgb(130, 192, 243);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid rgb(144, 165, 204);
+  border-top: none;
+}
+
+/* --------------------------------------- */
+
+
+.profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0c540c;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+/* ----------------------- */
+#table-wrapper {
+  position:relative;
+}
+#table-scroll {
+  height:550px;
+  overflow:auto;  
+  margin-top:20px;
+}
+#table-wrapper table {
+  width:100%;
+
+}
+#table-wrapper table * {
+  background:yellow;
+  color:black;
+}
+#table-wrapper table thead th .text {
+  position:absolute;   
+  top:-20px;
+  z-index:2;
+  height:20px;
+  width:35%;
+  border:1px solid red;
+}
+
+
+  </style> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head> 
+<body>
+ 
+<!-- navbar call -->
+<%- include('./partials/navbar.ejs') %>
+  <div class="main">
+    <div class="sidebar">
+      <ul>
+        <li><a href="/create_batches" class="active" ><i class="fa fa-list-alt" aria-hidden="true"></i><span>Create Batches</span></a></li>
+        <li><a href="#" ><i class="far fa-calendar"></i><span>Attendence</span></a></li>
+        <li><a href="/students" ><i class="fa fa-users" aria-hidden="true"></i><span>Students</span></a></li>
+        <li><a href="./admin_assignment" ><i class="fa fa-tasks"></i><span>Assignments</span></a></li>
+        <li><a href='/announcements'  ><i class="fa fa-bullhorn"></i><span>Announcements</span></a></li>
+        <li><a href="/test" ><i class="fa fa-trophy" aria-hidden="true"></i><span>Tests</span></a></li>
+        <li><a href="/admin_video" ><i class="far fa-file-video"></i><span>Vedios</span></a></li>
+        <li><a href="#" ><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>Live classes</span></a></li>
+        <li><a href="/admin_material" ><i class="fa fa-book" aria-hidden="true"></i><span>Study material</span></a></li>
+        <li><a href="#" ><i class="fa fa-cog"></i><span>Settings</span></a></li>
+</ul>
+    </div>
+    
+    <div class="page-content">
+       <!-- Content Wrapper. Contains page content -->
+      <div class="wrapper">      
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+          <!-- Main content -->
+          <section class="content">
+            <div class="row mb-2">
+              <div class="col-sm-4">
+                <h4>Students</h4>
+              </div>
+              <div class="col-sm-4">
+                  <div class="input-group">
+                      <div class="form-outline">
+                        <input type="search" id="form1" class="form-control-inline" />
+                      <button type="button" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                    </div>
+              </div>
+              
+             <!-- <div class="col-sm-4">
+                <button class="btn btn-primary bt-sm"data-toggle="modal" data-target="#myModal" ><i class="fa fa-plus"></i>	Add Students</button>
+              </div>-->
+              
+              <div>
+                  <div class="tab" style="width: 1100px; height: 48px;">
+                    <button class="tablinks active" style="width: 120px;" onclick="openTab(event, 'active_students')">Active (3)</button>
+                    <button class="tablinks" style="width: 120px;" onclick="openTab(event, 'inactive_students')">Inactive (0)</button>
+                    <a href="" style="margin-left: 856px;font-size: 20px;">See Join Requests</a>
+                  </div>
+                  <div id="active_students" id="table-wrapper"  style="display:block" class="tabcontent">
+                      <div  id="table-scroll" class="card-body p-0" style="margin-left: -14px;">
+                        <table class="table table-striped projects" style="margin-top: -7px;margin-left: 10px">
+                            <tbody>
+                              <% for(var person of userData){ %>
+                                <tr>
+                                    <td>
+                                      <div class="profileImage"></div>
+                                    </td>
+                                    <td>
+                                        <a href="/student_details?id=<%=person._id%>" style="color:black" class="fullName"><%=person.name %></a>
+                                    </td>
+                                    <td class="project_progress">
+                                            <%=person.email%>
+                                    </td>
+                                    <!--<td class="project-state">
+                                        <button style="padding: 0;border: none;background: none;"><i class="fas fa-ellipsis-v"></i></button>
+                                    </td>-->
+                                </tr>
+                              <% } %>
+                                <!-- <tr>
+                                    <td>
+                                        <div class="profileImage"></div>
+                                    </td>
+                                    <td>
+                                        <a href="/student_details" style="color:black" class="fullName">Michael Faraday</a>
+                                    </td>
+                                    
+                                    <td class="project_progress">
+                                        7894152638
+                                    </td>
+                                    <td class="project-state">
+                                        <button style="padding: 0;border: none;background: none;"><i class="fas fa-ellipsis-v"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="profileImage"></div>
+                                    </td>
+                                    <td>
+                                        <a href="/student_details" style="color:black" class="fullName">Albert Einstein</a>
+                                    </td>
+                                    
+                                    <td class="project_progress">
+                                        8529637412
+                                    </td>
+                                    <td class="project-state">
+                                        <button style="padding: 0;border: none;background: none;"><i class="fas fa-ellipsis-v"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="profileImage"></div>
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="/student_details" style="color:black" class="fullName">Albert Einstein</a>
+                                    </td>
+                                    
+                                    <td class="project_progress">
+                                        7895263418
+                                    </td>
+                                    <td class="project-state">
+                                        <button style="padding: 0;border: none;background: none;"><i class="fas fa-ellipsis-v"></i></button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="profileImage"></div>
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="/student_details" style="color:black" class="fullName">Marie Curie</a>
+                                    </td>
+                                    
+                                    <td class="project_progress">
+                                        7854963521
+                                    </td>
+                                    <td class="project-state">
+                                        <button style="padding: 0;border: none;background: none;"><i class="fas fa-ellipsis-v"></i></button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="profileImage"></div>
+                                        
+                                    </td>
+                                    <td>
+                                       <a href="/student_details" style="color:black" class="fullName">Isaac Newton</a>
+                                    </td>
+                                    
+                                    <td class="project_progress">
+                                        6547891236
+                                    </td>
+                                    <td class="project-state">
+                                        <button style="padding: 0;border: none;background: none;"><i class="fas fa-ellipsis-v"></i></button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="profileImage"></div>
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="/student_details" style="color:black" class="fullName">Nikola Tesla></a>
+                                    </td>
+                                    
+                                    <td class="project_progress">
+                                        8596747485
+                                    </td>
+                                    <td class="project-state">
+                                        <button style="padding: 0;border: none;background: none;"><i class="fas fa-ellipsis-v"></i></button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="profileImage"></div>
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="/student_details" style="color:black" class="fullName">Galileo Galilei</a>
+                                    </td>
+                                    
+                                    <td class="project_progress5">
+                                        4561239874
+                                    </td>
+                                    <td class="project-state">
+                                        <button style="padding: 0;border: none;background: none;"><i class="fas fa-ellipsis-v"></i></button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="profileImage"></div>
+                                    </td>
+                                    <td>
+                                        <a href="/student_details" style="color:black" class="fullName">Pythagoras</a>
+                                    </td>
+                                    
+                                    <td class="project_progress">
+                                        7896352417
+                                    </td>
+                                    <td class="project-state">
+                                        <button style="padding: 0;border: none;background: none;"><i class="fas fa-ellipsis-v"></i></button>
+                                    </td>
+                                    
+                                </tr> -->
+                            </tbody>
+                        </table>
+                      </div>
+                      <!-- /.card-body -->
+                  </div>
+              </div>
+                      
+              <div id="inactive_students" class="tabcontent">
+                <h3>inactive</h3>
+                <p>inactive .....</p>
+              </div>
+                
+               
+              </div>
+              
+      
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+      
+        <!-- Modal content -->
+        <div class="modal-content dialog">
+          <button class="close"><span class="close">&times;</span></button>
+          <div class="col">
+            <div class="row" style=" margin: 0 auto;margin-left: 50px;">
+              <!-- <div class="icon icon1" id="plus">Add students manually</div> -->
+              <div class="col">
+                <div class="fa fa-plus-circle row" style="font-size:48px;color:rgb(100, 100, 248);margin-left: 82px;"></div>
+                <div class="row"><h5 style="font-size:15px;color:rgb(61, 48, 48);padding: 20px;    margin-left: 34px;">Add Students manually</h5></div>
+              </div>
+      
+              <!-- <p>Some text in the Modal..</p> -->
+            </div>
+            <hr>
+            <div class="row"  style=" margin: 0 auto;margin-left: 50px;">
+              <!-- <i class="fas fa-file-download icon1" style="font-size:48px;color:blue"></i><br/> -->
+              <div class="col">
+                <div class="fas fa-file-download" style="font-size:48px;color:rgb(100, 100, 248);    margin-left: 91px;" ></div>
+                <div class="row"><h5 style="font-size:15px;color:rgb(61, 48, 48);    margin-left: 1px;    padding: 20px;" >Add students from app download</h5></div>
+              </div>
+      
+            </div>
+            <hr>
+            <div class="row"  style=" margin: 0 auto;margin-left: 50px;">
+              <div class="col">
+                <div class="fas fa-cloud-upload-alt " style="font-size:48px;color:rgb(100, 100, 248);    margin-left: 81px;"></div>
+                <div class="row"><h5 style="font-size:15px;color:rgb(61, 48, 48);padding: 20px;margin-left:10px;" >Upload CV file to add students</h5></div>
+              </div>
+      
+            </div>
+          </div>
+           <a href="" style="font-size:15px;color:rgb(59, 110, 206);    margin-left: 104px;margin-top: -15px;">Download sample CSV file</a>
+        </div>
+              </div>
+           <!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+      
+          <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
+            <i class="fas fa-chevron-up"></i>
+          </a>
+        </div>
+        <!-- /.content-wrapper -->
+      </div>
+    </div>  
+  </div>
+
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.1.0-rc
+    </div>
+    <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+    </section>
+    <!-- /.content -->
+
+    <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  </div>
+    </div>
+  </div>
+</div>
+<script>
+  let menuButton = document.querySelector(".button-menu");
+let container = document.querySelector(".container");
+let pageContent = document.querySelector(".page-content");
+let responsiveBreakpoint = 991;
+
+if (window.innerWidth <= responsiveBreakpoint) {
+  container.classList.add("nav-closed");
+}
+
+menuButton.addEventListener("click", function () {
+  container.classList.toggle("nav-closed");
+});
+
+pageContent.addEventListener("click", function () {
+  if (window.innerWidth <= responsiveBreakpoint) {
+    container.classList.add("nav-closed");
+  }
+});
+
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth > responsiveBreakpoint) {
+    container.classList.remove("nav-closed");
+  }
+});
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("add_student");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
+function openTab(evt, student_name) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(student_name).style.display = "block";
+  console.log('****** ',evt.currentTarget.className)
+  evt.currentTarget.className += " active";
+}
+
+var coll = document.getElementsByClassName("fullName");
+var i;
+var intials = []
+for (i = 0; i < coll.length; i++) {
+  var col = document.getElementsByClassName("fullName").item(i);
+  intials.push(col.innerHTML.split(' ').map(name => name[0]).join('').toUpperCase())
+  document.getElementsByClassName("profileImage")[i].innerHTML = col.innerHTML.split(' ').map(name => name[0]).join('').toUpperCase()
+}
+document.getElementsByClassName('b4').onclick = function(){
+          console.log("logout");
+          swal({
+            title: "Are you sure?",
+            text: "You want to logout!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: '#DD6B55',
+            confirmButtonText: 'Yes!',
+            closeOnConfirm: false,
+            //closeOnCancel: false
+          },
+          function(){
+            console.log('yes!!!!!!!!!')
+            window.href = '/login';
+          });
+        };
+// -----------------------------------------------
+
+</script>
+</body> 
+</html> 

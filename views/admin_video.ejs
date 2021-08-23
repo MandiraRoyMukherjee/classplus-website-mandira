@@ -1,0 +1,238 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Page Title</title> 
+     <script src=" https://kit.fontawesome.com/a076d05399.js"> 
+    </script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.8.349/pdf.min.js"></script>
+    <script src="pdf.js"></script>
+    <script src="pdf.worker.js"></script>
+    <style> 
+     * {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Hind Vadodara", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica Neue, Arial, sans-serif;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.main {
+  height: calc(100% - 50px);
+  display: flex;
+  flex: 1;
+}
+.sidebar {
+  height: 100%;
+  width: 290px;
+  box-sizing: border-box;
+  box-shadow: 0 0 2rem 0 rgb(0 0 0 / 5%);
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+.container.nav-closed .sidebar,
+.container.nav-closed .header-logo {
+  width: 0;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+}
+.sidebar ul li a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  white-space: nowrap;
+}
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background: #e8ecef;
+}
+.sidebar ul li span {
+  margin-left: 16px;
+  font-size: 16px;
+  font-weight: 100;
+}
+.sidebar ul li i {
+  font-size: 18px;
+  color: #111;
+  font-weight: normal;
+}
+.header {
+  height: 50px;
+  background: #303f9f;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+}
+.sidebar ul li a.active i {
+  color: #303f9e;
+}
+.site-logo {
+  height: 32px;
+  width: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  margin: 0 18px 0 15px;
+}
+.site-logo path {
+  fill: #fff;
+}
+.site-title {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.page-content {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+}
+.page-content h1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+}
+.header-search {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding: 0 20px;
+  flex: 1;
+}
+.header-search .button-menu {
+  width: 28px;
+  height: 28px;
+  margin-right: 15px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+.header-search input[type="search"] {
+  height: 100%;
+  width: 300px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 100;
+  background: none;
+  border: none;
+  color: #fff;
+}
+.header-search input[type="search"]:focus {
+  outline: none;
+}
+.header-search input[type="search"]::placeholder {
+  color: #ccc;
+}
+.header-search .button-menu:focus {
+  outline: none;
+  border: none;
+}
+.header-search .button-menu svg path {
+  fill: #fff;
+}
+@media screen and (max-width: 991px) {
+  .page-content {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-logo {
+    display: none;
+  }
+}
+  </style> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+<body>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;500&display=swap" rel="stylesheet">
+
+<!-- navbar call -->
+<%- include('./partials/navbar.ejs') %>
+  <div class="main">
+    <div class="sidebar">
+      <ul>
+        <li><a href="/create_batches" class="active" ><i class="fa fa-list-alt" aria-hidden="true"></i><span>Create Batches</span></a></li>
+        <li><a href="#" ><i class="far fa-calendar"></i><span>Attendence</span></a></li>
+        <li><a href="/students" ><i class="fa fa-users" aria-hidden="true"></i><span>Students</span></a></li>
+        <li><a href="./admin_assignment" ><i class="fa fa-tasks"></i><span>Assignments</span></a></li>
+        <li><a href='/announcements'  ><i class="fa fa-bullhorn"></i><span>Announcements</span></a></li>
+        <li><a href="/test" ><i class="fa fa-trophy" aria-hidden="true"></i><span>Tests</span></a></li>
+        <li><a href="/admin_video" ><i class="far fa-file-video"></i><span>Vedios</span></a></li>
+        <li><a href="#" ><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>Live classes</span></a></li>
+        <li><a href="/admin_material" ><i class="fa fa-book" aria-hidden="true"></i><span>Study material</span></a></li>
+        <li><a href="#" ><i class="fa fa-cog"></i><span>Settings</span></a></li>
+
+           </ul>
+    </div>
+    <div class="page-content">
+       <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+
+    <form method="POST" action="/admin_video">
+      <label for="w3review">Enter your video link</label>
+        <br>
+      <textarea id="w3review" name="w3review" rows="4" name="videoUrl" cols="50"></textarea>
+      <br>
+        
+      <input type="submit" value="Submit">
+    </form>
+
+  </div>
+  <% if(videoData.length > 0){ %>
+    <h1>Video URLs: </h1>
+    <% for(var video of videoData){ %>
+        <div class="card bg-light text-dark">
+          <div class="card-body"><%=video.videoURL%></div>
+        </div>
+    <% } %>
+  <% } else{ %>  
+    <div class="card bg-light text-dark">
+      <div class="card-body">No Video URLs are found.!</div>
+    </div>
+ <% } %>
+  
+    </div>
+   
+<script>
+ 
+</script>
+</body> 
+</html> 

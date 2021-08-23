@@ -1,0 +1,22 @@
+.floatp{float:right;margin-left:23px}@media screen and (max-width:1000px){.pcoded[theme-layout=vertical] .pcoded-header[pcoded-header-position=fixed]{margin-top:0}}*{-webkit-box-sizing:border-box;box-sizing:border-box}.column1{float:left;width:70%;padding:10px;height:300px}.column2{float:left;width:30%;padding:10px;height:300px}.row:after{content:"";display:table;clear:both}.row{margin-top:0px}.more{padding:0 45%}@media screen and (max-width:1000px){.column1{float:left;width:100%;padding:10px;height:300px;margin-top:-29px}.column2{display:none;float:left;width:30%;padding:10px;height:300px}.column0{width:100%;margin-top:-91px}}.dailyDose{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around;text-align:center;font-size:15px}.dailyDose div{cursor:pointer}.dailyHeader{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin:1em}.dailyHeader2{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin:-7px 0 0 0;background-color:#f3f3f3;padding:11px 11px}.dailyRow{padding:1em}.dailyBox{-webkit-box-shadow:0 0 1px grey;box-shadow:0 0 1px grey;border-radius:8px;margin:10px 0;background-color:#fff;padding:15px}.dailyBox div:last-child{padding:0 0;font-size:100%;color:#000;font-weight:600}.dailyBox1{border-radius:8px;margin:10px 0;background-color:#fff;padding:0}.dailyBox2{height: 0px;-webkit-box-shadow:0 0 1px grey;box-shadow:0 0 1px grey;border-radius:8px;margin:10px 0;background-color:#fff;padding:7px 0}.dailyBox1 div:last-child{padding:2px 5px;font-size:17px;color:#000;font-weight:600}@media (max-width:1000px){.dailyDose{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}}
+
+.card-top-daily-header-2{
+  background-color: #ffbb91;
+  text-align: left;
+  font-weight: bold;
+  padding: 5px;
+  padding-left: 12px;
+}
+
+.transcation-table{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+thead{
+  font-weight: bold;
+}
+
+.main-list{
+  font-weight: bold;
+}

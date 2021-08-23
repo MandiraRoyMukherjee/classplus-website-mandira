@@ -1,0 +1,127 @@
+.notinav {
+    border-radius: 17px;
+    padding: 3px 5px;
+    font-size: 11px;
+    position: absolute;
+    margin: 0 0px 0 0px;
+    color: white;
+}
+
+.notimobi{
+    position: absolute;
+    transform: translate3d(-43%, 2em, 0em);
+    top: 0px;
+    left: 0px;
+    width: 19em;
+    will-change: transform;
+}
+
+
+
+
+
+@media screen and (max-height: 750px) {
+	
+	.dropdown-toggle .badge  {
+    margin: -4px 0 0 -14px;
+    position: absolute;
+}
+.icon-bell{
+    font-size: 28px;
+    margin: 0 0 0 40px;
+    color: white;
+}
+
+}
+.right_bar {
+    display: block;
+    position: absolute;
+    right: 10px;
+}
+
+
+.right_bar {
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+	display: none;
+  position: relative;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;margin-top: 55px;}
+  .sidenav a {font-size: 18px;}
+  
+}
+
+
+
+
+
+.topnav input[type=text] {
+  
+  float: right;
+  display: none;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 1000px) {
+  .topnav input[type=text] {
+    
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  
+  .topnav input[type=text] {
+    border: 1px solid #ccc; 
+margin: -3px 0px 21px -12px;	
+  }
+}

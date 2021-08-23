@@ -1,0 +1,10 @@
+{
+    "host": "localhost",
+    "devURL": "http://localhost:8000",
+    "env": "development",
+    "dbURL": "mongodb://localhost:27017/cwcmongo",
+    "secret": "aaaaaaaaaaJWT",
+    "types": [1, 2, 3],
+    "numbers": [5, 5, 5]
+  }
+  

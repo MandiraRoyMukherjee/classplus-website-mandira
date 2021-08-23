@@ -1,0 +1,352 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Page Title</title> 
+     <script src=" https://kit.fontawesome.com/a076d05399.js"> 
+    </script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.8.349/pdf.min.js"></script>
+    <script src="pdf.js"></script>
+    <script src="pdf.worker.js"></script>
+    <style> 
+     * {
+  margin: 0;
+  padding: 0;
+}
+#table-scroll {
+  height:550px;
+  overflow:auto;  
+  margin-top:20px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+body {
+  font-family: "Hind Vadodara", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica Neue, Arial, sans-serif;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.main {
+  height: calc(100% - 50px);
+  display: flex;
+  flex: 1;
+}
+.sidebar {
+  height: 100%;
+  width: 290px;
+  box-sizing: border-box;
+  box-shadow: 0 0 2rem 0 rgb(0 0 0 / 5%);
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+.container.nav-closed .sidebar,
+.container.nav-closed .header-logo {
+  width: 0;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+}
+.sidebar ul li a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  white-space: nowrap;
+}
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background: #e8ecef;
+}
+.sidebar ul li span {
+  margin-left: 16px;
+  font-size: 16px;
+  font-weight: 100;
+}
+.sidebar ul li i {
+  font-size: 18px;
+  color: #111;
+  font-weight: normal;
+}
+.header {
+  height: 50px;
+  background: #303f9f;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+}
+.sidebar ul li a.active i {
+  color: #303f9e;
+}
+.site-logo {
+  height: 32px;
+  width: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  margin: 0 18px 0 15px;
+}
+.site-logo path {
+  fill: #fff;
+}
+.site-title {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.page-content {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+}
+.page-content h1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+}
+.header-search {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding: 0 20px;
+  flex: 1;
+}
+.header-search .button-menu {
+  width: 28px;
+  height: 28px;
+  margin-right: 15px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+.header-search input[type="search"] {
+  height: 100%;
+  width: 300px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 100;
+  background: none;
+  border: none;
+  color: #fff;
+}
+.header-search input[type="search"]:focus {
+  outline: none;
+}
+.header-search input[type="search"]::placeholder {
+  color: #ccc;
+}
+.header-search .button-menu:focus {
+  outline: none;
+  border: none;
+}
+.header-search .button-menu svg path {
+  fill: #fff;
+}
+@media screen and (max-width: 991px) {
+  .page-content {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-logo {
+    display: none;
+  }
+}
+  </style> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;500&display=swap" rel="stylesheet">
+
+<!-- navbar call -->
+<%- include('./partials/navbar.ejs') %>
+  <div class="main">
+    <div class="sidebar">
+      <ul>
+        <li><a href="/create_batches" ><i class="fa fa-list-alt" aria-hidden="true"></i><span>Create Batches</span></a></li>
+        <li><a href="#" ><i class="far fa-calendar"></i><span>Attendence</span></a></li>
+        <li><a href="/students" ><i class="fa fa-users" aria-hidden="true"></i><span>Students</span></a></li>
+        <li><a href="./admin_assignment" class="active"  ><i class="fa fa-tasks"></i><span>Assignments</span></a></li>
+        <li><a href='/announcements'  ><i class="fa fa-bullhorn"></i><span>Announcements</span></a></li>
+        <li><a href="/test" ><i class="fa fa-trophy" aria-hidden="true"></i><span>Tests</span></a></li>
+        <li><a href="/admin_video" ><i class="far fa-file-video"></i><span>Vedios</span></a></li>
+        <li><a href="#" ><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>Live classes</span></a></li>
+        <li><a href="/admin_material" ><i class="fa fa-book" aria-hidden="true"></i><span>Study material</span></a></li>
+        <li><a href="#" ><i class="fa fa-cog"></i><span>Settings</span></a></li>
+    
+    </ul>
+    </div>
+    <div class="page-content" id="table-scroll">
+       <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <form method="POST" action="/admin_assignment" enctype="multipart/form-data">
+      <div>
+        <label for="file" >Choose file to upload</label><br/>
+      <input type="file" name="file">
+        <div id="pdf-loader" style="display:none">Loading Preview ..</div>
+        <canvas id="pdf-preview" width="150" style="display:none"></canvas> 
+    
+      </div>
+      <div>
+        <input type="submit"  class="btn btn-primary" value="upload"/>
+      </div>
+     </form>
+     
+    </div>
+    <hr>
+    <div class="card-header" >
+             <label>Uploaded Assignments</label>
+     </div>
+    <div class="main-body">
+
+        
+          <% for(var pdf of assignment_Data){ %>
+            
+          <div>
+                <a href="/getpdf?id=<%=pdf._id%>&assignment=true">
+                  <!-- <div class="card bg-light text-dark"> -->
+                    <div class="card">
+                        <h4>TITLE:<%=pdf.pdfName%></h4>
+                        <h5>PDF size:<%=pdf.pdfSize%></h5>
+                    </div>
+                    <!-- </div> -->
+                </a >
+            </div>
+          <% } %>
+              
+            
+          </div>
+  </div>
+
+    
+    </div>
+   
+<script>
+  // will hold the PDF handle returned by PDF.JS API
+var _PDF_DOC;
+
+// PDF.JS renders PDF in a <canvas> element
+var _CANVAS = document.querySelector('#pdf-preview');
+
+// will hold object url of chosen PDF
+var _OBJECT_URL;
+
+// load the PDF
+function showPDF(pdf_url) {
+    PDFJS.getDocument({ url: pdf_url }).then(function(pdf_doc) {
+        _PDF_DOC = pdf_doc;
+
+        // show the first page of PDF
+        showPage(1);
+
+        // destroy previous object url
+        URL.revokeObjectURL(_OBJECT_URL);
+    }).catch(function(error) {
+        // error reason
+        alert(error.message);
+    });;
+}
+
+// show page of PDF
+function showPage(page_no) {
+    _PDF_DOC.getPage(page_no).then(function(page) {
+        // set the scale of viewport
+        var scale_required = _CANVAS.width / page.getViewport(1).width;
+
+        // get viewport of the page at required scale
+        var viewport = page.getViewport(scale_required);
+
+        // set canvas height
+        _CANVAS.height = viewport.height;
+
+        var renderContext = {
+            canvasContext: _CANVAS.getContext('2d'),
+            viewport: viewport
+        };
+        
+        // render the page contents in the canvas
+        page.render(renderContext).then(function() {
+            document.querySelector("#pdf-preview").style.display = 'inline-block';
+            document.querySelector("#pdf-loader").style.display = 'none';
+        });
+    });
+}
+
+/* showing upload file dialog */
+document.querySelector("#upload-dialog").addEventListener('click', function() {
+    document.querySelector("#pdf-file").click();
+});
+
+/* when users selects a file */
+document.querySelector("#pdf-file").addEventListener('change', function() {
+    // user selected PDF
+    var file = this.files[0];
+
+    // allowed MIME types
+    var mime_types = [ 'application/pdf' ];
+    
+    // validate whether PDF
+    if(mime_types.indexOf(file.type) == -1) {
+        alert('Error : Incorrect file type');
+        return;
+    }
+
+    // validate file size
+    if(file.size > 10*1024*1024) {
+        alert('Error : Exceeded size 10MB');
+        return;
+    }
+
+    // validation is successful
+
+    // hide upload dialog
+    document.querySelector("#upload-dialog").style.display = 'none';
+    
+    // show the PDF preview loader
+    document.querySelector("#pdf-loader").style.display = 'inline-block';
+
+    // object url of PDF 
+    _OBJECT_URL = URL.createObjectURL(file)
+
+    // send the object url of the pdf to the PDF preview function
+    showPDF(_OBJECT_URL);
+});
+</script>
+</body> 
+</html> 

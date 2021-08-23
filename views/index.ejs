@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Class Plus</title>
+  <link rel="stylesheet" href="assets/css/landing-page.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/profile-card.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://kit.fontawesome.com/4e9a685ceb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+  <!-- Required Fremwork -->
+  <link rel="stylesheet" type="text/css" href="bower_components\bootstrap\css\bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+
+  <link rel="manifest" href="manifest.json" />
+  <script type="module">
+    import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+    const el = document.createElement('pwa-update');
+    document.body.appendChild(el);
+  </script>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar">
+    <a class="logo" href="index.html">
+      <!-- <img src="assets/images/logo.webp" type=""> -->
+    </a>
+    <div class="login">
+      <a id="login" href='/admin_login'>
+        ADMIN LOGIN
+      </a>
+      <a id="join" href="/register">
+        JOIN FOR FREE
+      </a>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Header -->
+  <div class="header">
+    <div class="text">
+      <h1>Your Course <br> to Sucess</h1>
+      <p>Build skills with courses, certificates, and <br> degrees online from world-class universities <br> and
+        companies
+      </p>
+      <a href="/register">
+        Start your Demo
+      </a>
+    </div>
+    <div>
+      <img style="width: 97%;" src="assets/images/online_edu.jpg" />
+    </div>
+  </div>
+  <!-- Header -->
+  
+  <!-- video -->
+  <div class="video-section">
+    <iframe class="iframe" width="1000" height="500" src="https://www.youtube.com/embed/EEtV6yXeQTw" title="YouTube video player"
+      frameborder="0" allowfullscreen></iframe>
+  </div>
+  <!-- video -->
+
+  <!-- sub-header -->
+  <div class="subHeader">
+    <div class="title">
+      <h1>Find flexible, affordable options</h1>
+    </div>
+    <!-- <div class="title">
+      <a href="#">GET START </a>
+    </div> -->
+    <div class="featureWrapper">
+      <div class="feature">
+        <div class="featureImg blue">
+          <i class="fas fa-book-reader" data-aos="zoom-in"></i>
+        </div>
+        <div class="featureText">
+          <h1>100,000 online courses</h1>
+          <h2>Explore a variety of fresh topics</h2>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="featureImg blue">
+          <i class="fas fa-pencil-ruler" data-aos="zoom-in"></i>
+        </div>
+        <div class="featureText">
+          <h1>Expert instruction</h1>
+          <h2>Find the right instructor for you</h2>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="featureImg blue">
+          <i class="fas fa-calendar" data-aos="zoom-in"></i>
+        </div>
+        <div class="featureText">
+          <h1>Lifetime access</h1>
+          <h2>Learn on your schedule</h2>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="featureImg blue">
+          <i class="fas fa-calendar" data-aos="zoom-in"></i>
+        </div>
+        <div class="featureText">
+          <h1>Lifetime access</h1>
+          <h2>Learn on your schedule</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sub-header -->
+
+
+
+  <!--  SubjectsWrapper -->
+  <div class="subjectsWrapper">
+    <div class="subjectTitle">Popular Subjects</div>
+    <div class="subjectCardWrapper">
+
+
+      <div class="subjectCard">
+        <div class="subjectImg">
+          <i class="fas fa-laptop"></i>
+        </div>
+        <div class="subjectText">
+          Computer <br> Science
+        </div>
+      </div>
+
+
+      <div class="subjectCard">
+        <div class="subjectImg">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="subjectText">
+          Business & <br> Management
+        </div>
+      </div>
+      <div class="subjectCard">
+        <div class="subjectImg">
+          <i class="fas fa-dna"></i>
+        </div>
+        <div class="subjectText">
+          Biology & <br> Life Sciences
+        </div>
+      </div>
+
+      <div class="subjectCard">
+        <div class="subjectImg">
+          <i class="fas fa-seedling"></i>
+        </div>
+        <div class="subjectText">
+          Environmental <br> Science
+        </div>
+      </div>
+
+      <div class="subjectCard">
+        <div class="subjectImg">
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="subjectText">
+          Data Analysis <br> & Statistics
+        </div>
+      </div>
+      <div class="subjectCard">
+        <div class="subjectImg">
+          <i class="fas fa-pizza-slice"></i>
+        </div>
+        <div class="subjectText">
+          Food & <br> Nutrition
+        </div>
+      </div>
+      <div class="subjectCard">
+        <div class="subjectImg">
+          <i class="far fa-comments"></i>
+        </div>
+        <div class="subjectText">
+          Social <br> Sciences
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  SubjectsWrapper -->
+
+
+  <!--  TestWrapper -->
+  <div class="testWrapper">
+    <div class="testTitle">
+      <h1>Take the free mock test now !!</h1>
+    </div>
+    <div class="testCardWrapper">
+      <div class="testCard">
+        <div class="testImg" id="historyImg">
+          <img src="assets/images/history.svg" alt="">
+        </div>
+        <div class="testText">
+          <h1>History</h1>
+          <a href="#">START</a>
+        </div>
+      </div>
+      <div class="testCard">
+        <div class="testImg" id="polityImg">
+          <img src="assets/images/polity.svg" alt="">
+        </div>
+        <div class="testText">
+          <h1>Polity</h1>
+          <a href="#">START</a>
+        </div>
+      </div>
+      <div class="testCard">
+        <div class="testImg" id="geographyImg">
+          <img src="assets/images/geography.svg" alt="">
+        </div>
+        <div class="testText">
+          <h1>Geography</h1>
+          <a href="#">START</a>
+        </div>
+      </div>
+      <div class="testCard">
+        <div class="testImg" id="science">
+          <img src="assets/images/sceince.svg" alt="">
+        </div>
+        <div class="testText">
+          <h1>Science</h1>
+          <a href="#">START</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  TestWrapper -->
+
+  <section class="section_1">
+    <div id="features" class="features1 feature-section ptb-100 ">
+      <div class="container1">
+        <div class=" container_div row justify-content-center">
+          <div class="container_innerdiv col-md-9 col-lg-9">
+            <div class="container_super_inner_div text-center mb-5">
+              <h2 style="font-size: 35px;">Grow your teaching business by 5x</h2>
+              <p style="font-size: 20px; font-weight: bold;">Create your online presence backed by features that make it
+                easier for you to manage students, increase
+                transaction, and grow your business</p>
+            </div>
+          </div>
+        </div>
+
+        <div class=" row align-items-center justify-content-md-center">
+          <div class="col-lg-4 col-md-12">
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex align-items-start mb-sm-0 mb-md-5 mb-lg-5"><img
+                    src="https://classplusapp.com/assets/img/app-icon-3.png" alt="app icon" width="50"
+                    class="img-fluid mr-3">
+                  <div class="icon-text">
+                    <h5 style="font-size: 25px;">Store</h5>
+                    <p style="font-size: 20px;">Sell your courses and study material to students across India</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex align-items-start mb-sm-0 mb-md-5 mb-lg-5"><img
+                    src="https://classplusapp.com/assets/img/app-icon-4.png" alt="app icon" width="50"
+                    class="img-fluid mr-3">
+                  <div class="icon-text">
+                    <h5 style="font-size: 25px;" class="mb-2">Video Lectures</h5>
+                    <p style="font-size: 20px;">Grow your brand through your video lectures with free infinite storage
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex align-items-start mb-sm-0 mb-md-5 mb-lg-5"><img
+                    src="https://classplusapp.com/assets/img/app-icon-3.png" alt="app icon" width="50"
+                    class="img-fluid mr-3">
+                  <div class="icon-text">
+                    <h5 style="font-size: 25px;" class="mb-2">Live Classes</h5>
+                    <p style="font-size: 20px;">Take multiple live classes with automatic recordings and unlimited
+                      students</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mobile_div col-lg-4 col-md-5 d-none d-sm-none d-md-block d-lg-block">
+            <div class=" mobile_innerdiv position-relative pb-md-5 py-lg-0"><img alt="placeholder"
+                src="assets/images/phone1.png" class="img-center img-fluid"></div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex align-items-start mb-sm-0 mb-md-5 mb-lg-5"><img
+                    src="https://classplusapp.com/assets/img/app-icon-7.png" alt="app icon" width="50"
+                    class="img-fluid mr-3">
+                  <div class="icon-text">
+                    <h5 style="font-size: 25px;" class="mb-2">Online Assessments</h5>
+                    <p style="font-size: 20px;">Take unlimited online assessments with your students and share feedback
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex align-items-start mb-sm-0 mb-md-5 mb-lg-5"><img
+                    src="https://classplusapp.com/assets/img/app-icon-8.png" alt="app icon" width="50"
+                    class="img-fluid mr-3">
+                  <div class="icon-text">
+                    <h5 style="font-size: 25px;" class="mb-2">Stat Dashboard</h5>
+                    <p style="font-size: 20px;">Take the guesswork out of marketing with AI-powered student engagement
+                      analytics</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex align-items-start mb-sm-0 mb-md-5 mb-lg-5"><img
+                    src="https://classplusapp.com/assets/img/app-icon-9.png" alt="app icon" width="50"
+                    class="img-fluid mr-3">
+                  <div class="icon-text">
+                    <h5 style="font-size: 25px;" class="mb-2">Privacy Control</h5>
+                    <p style="font-size: 20px;">Your data is secured using SSL AES 256-bit encryption providing maximum
+                      security</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center action-btns mt-3"><a href="/register" class="btn btn-brand-02 mr-3">Get
+            Started Now</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- join wrapper -->
+  <div class="joinWrapper">
+    <div class="joinImg">
+      <img src="assets/images/ai.svg" alt="">
+    </div>
+    <div class="joinText">
+      <p>Every hour, we empower 50+ educators to go digital
+        1 Lakh+ educators across the world have earned over ₹ 500 Cr with the support of our technology</p>
+      <a href="/register"><i class="fas fa-chevron-right"></i> JOIN FOR FREE</a>
+    </div>
+  </div>
+
+  <!-- join wrapper -->
+
+  <!-- container -->
+  <div class="container mb-5 row card-row ">
+    <!-- <div class=""> -->
+    <div class="col-lg-4 col-md-6 col-sm-6 prof-card">
+      <!-- <img class="card-img" src="assets/images/office-boy1.jpg" alt="Card image"> -->
+      <div class="card p-3 text-center bg-primary text-white prof-card-body">
+        <h2 class="name-info">Matt McReynolds</h2>
+        <h2 class="name-position">Creative Head</h2>
+        <p class="prof-info">Adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+        <div class="social-icons">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-google"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 prof-card">
+      <!-- <img class="card-img" src="assets/images/office-boy1.jpg" alt="Card image"> -->
+      <div class="card p-3 text-center bg-primary text-white prof-card-body">
+        <h2 class="name-info">Matt McReynolds</h2>
+        <h2 class="name-position">Creative Head</h2>
+        <p class="prof-info">Adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+        <div class="social-icons">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-google"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 prof-card">
+      <!-- <img class="card-img" src="assets/images/office-boy1.jpg" alt="Card image"> -->
+      <div class="card p-3 text-center bg-primary text-white prof-card-body">
+        <h2 class="name-info">Matt McReynolds</h2>
+        <h2 class="name-position">Creative Head</h2>
+        <p class="prof-info">Adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+        <div class="social-icons">
+          <i class="fa fa-facebook-f"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-google"></i>
+        </div>
+      </div>
+      <!-- </div> -->
+
+    </div>
+  </div>
+  <!-- container -->
+
+  <script src="assets/js/landing-page.js"></script>
+
+
+
+  <section id="faq" class="faq ptb-100 gray-light-bg ">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col col-md-9 col-lg-8">
+          <div class="innerdiv section-heading text-center mb-5">
+            <h2>Frequently Asked Queries</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-12 col-lg-6 mb-5 mb-md-5 mb-sm-5 mb-lg-0">
+          <div class="img-wrap"><img src="assets/images/asked.png" alt="download" class="img-fluid"></div>
+        </div>
+        <div class="col-md-12 col-lg-6">
+          <div id="accordion" class="accordion faq-wrap">
+            <div class="card mt-3"><a class="card-header collapsed" data-toggle="collapse" href="#collapse3"
+                aria-expanded="false">
+                <h6 class="mb-0 d-inline-block" style="font-size:25px;">What is Classplus's mission?</h6>
+              </a>
+              <div id="collapse3" class="collapse show" data-parent="#accordion">
+                <div class="card-body white-bg">
+                  <p style="font-size:17px;">At Classplus, we have a dream of empowering every educator in the country
+                    to build their online
+                    brand and simplify their lives so that they can focus only on teaching.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3"><a class="card-header collapsed" data-toggle="collapse" href="#collapse0"
+                aria-expanded="false">
+                <h6 class="mb-0 d-inline-block" style="font-size:25px;">Who are the people behind Classplus?</h6>
+              </a>
+              <div id="collapse0" class="collapse show" data-parent="#accordion">
+                <div class="card-body white-bg">
+                  <p style="font-size:17px;">Classplus is a team of graduates of IITs and IIMs and alumni of top
+                    companies like Microsoft,
+                    Zomato etc and are backed by global investors across 5 different countries. Helping every teacher in
+                    India upscale their business is what drives us to deliver, excel, and grow.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card my-3"><a class="card-header collapsed" data-toggle="collapse" href="#collapse2"
+                aria-expanded="false">
+                <h6 class="mb-0 d-inline-block " style="font-size:25px;">How can Classplus help me in growing my
+                  teaching business?</h6>
+              </a>
+              <div id="collapse2" class="collapse show" data-parent="#accordion">
+                <div class="card-body white-bg">
+                  <p style="font-size:17px;">Our specialized in-house teams support our teacher partners to grow their
+                    business digitally by
+                    providing them with marketing insights, teaching them about the intricacies of digital marketing,
+                    and providing them with customized tools to manage all aspects of the business.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+<footer style="font-size:x-large;" class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Company name
+          </h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+  <!-- Footer -->
+  <!-- <div class="footer" style="font-size: medium; color: black;">
+    <footer>
+
+      <div class="information">
+
+        <a href="">
+          <p> About us</p>
+          
+        </a>
+      </div>
+
+      <div class="account">
+
+      </div>
+      <div class="newsletter">
+
+        <p>enter your email address below <br>
+        </p>
+        <input type="email" name="email" placeholder="user@example.com">
+        <button>Subscribe</button>
+        <p class="p2tag">follow us on social networks</p>
+        <a href="https://www.facebook.com/developerscwc"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://in.linkedin.com/in/code-with-coffee-1980b0204"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/watch?v=m8NJQTikmHw"><i class="fab fa-youtube"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fas fa-rss"></i></a>
+      </div>
+    </footer>
+
+    <div class="footer-2">
+      <p>Powered by <span>Tech</span>-Designed by <span>Someone</span></p>
+      <div class="icons">
+        <a href=""><i class="fab fa-cc-paypal" style="font-size:20px;"></i></a>
+        <a href=""><i class="fab fa-cc-visa" style="font-size:20px;"></i></a>
+        <a href=""><i class="fab fa-cc-amex" style="font-size:20px;"></i></a>
+        <a href=""><i class="fab fa-cc-mastercard" style="font-size:20px;"></i></a>
+        <a href=""><i class="fab fa-cc-mastercard" style="font-size:20px;"></i></a>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+  </div> -->
+  <!-- Footer -->
+</body>
+</html>

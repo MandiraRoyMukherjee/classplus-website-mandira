@@ -1,0 +1,265 @@
+.floatp {
+	float: right;
+	margin-left: 23px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+
+.column1 {
+    float: left;
+    width: 60%;
+    padding: 10px;
+    height: 300px;
+
+}
+
+.column2 {
+    float: left;
+    width: 40%;
+    padding: 10px;
+    height: 300px;
+
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+        margin-top: -55px;
+}
+
+.more {
+    padding: 0 45%;
+}
+
+	.submit-doubt {
+		float: right;
+	}
+
+	.head {
+		background-color: #006B99;
+	}
+
+	.btn-link{
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.btn-link:focus , .btn-link:hover{
+		color: #fff;
+		text-decoration: none;
+	}
+
+
+@media screen and (max-width: 1000px) {
+
+	.column1 {
+	    float: left;
+	    width: 100%;
+	    padding: 10px;
+	    height: 300px;
+		margin-top: 0px;
+		position: absolute;
+
+	}
+
+	.column2 {
+		/* display: none; */
+		position: absolute;
+	    float: left;
+	    width: 100%;
+	    padding: 10px;
+	    height: 300px;
+			margin-top: -130px
+
+	}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 5px 13px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 16px;
+    float: right;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+
+
+
+.userimg {
+    width: 4em;
+    border-radius: 100px;
+}
+
+
+.dailyRow {
+    display: grid;
+    grid-template-columns: 11% 85%;
+}
+
+.ques {
+    padding: 14% 0;
+}
+
+.card-text {
+  font-size: 124%;
+  font-weight: 900;
+  padding: 10px;
+  margin-left: -5px;
+}
+
+.card-text1 {
+  font-size: 14px;
+  font-weight: 200;
+  padding: 4px;
+  line-height:1.5em;
+}
+
+.tags{
+  margin-left: -4px;
+}
+
+.tags a {
+    padding: 5px;
+    margin: 5px;
+    color: #39739d;
+    background-color: #e1ecf4;
+}
+
+.center {
+  float: right;
+      margin: 0 58% 0 0;
+}
+
+
+@media (max-width: 1000px) {
+    .dailyRow {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.column1 {
+	margin-top: -26px;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+
+}
+
+.column2 {
+	/* display: none; */
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+
+}
+}
+
+.chat {
+  width:30px;
+  float: right;
+}
+
+
+
+.vote {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-right: 0px;
+    align-items: center;
+    text-align: center;
+    font-size:1.4em;
+}
+
+.userimg{
+  width: 100%;
+}
+
+.vote-btn{
+  padding: 5px;
+}
+
+@media (max-width: 1000px)
+{
+  .vote{
+    margin: 0px;
+    float: right;
+  }
+
+  .userimg{
+    width: 20%;
+  }
+
+  .vote-btn{
+    padding: 4px;
+  }
+
+  .tags {
+    width: 80%;
+    height: 40px;
+    overflow-x: scroll;
+}
+
+.center{
+  float:none;
+}
+
+}

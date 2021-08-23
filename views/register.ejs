@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="BasicAuth">
+    <meta name="author" content="siddub">
+
+    <title>BasicAuth</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" rel="stylesheet" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<div class="container">
+  <form method="POST" action="/register">
+    <h2>Registration Form </h2>
+    <input name="name" type="text" id="name" class="form-control" placeholder="Full Name"
+              autofocus="true" value="<%= qs.person %>"/>
+    <input name="password" id="password" type="password" class="form-control" placeholder="Password" value="<%= qs.person %>"/>
+
+    <input name="email" id="email" type="text" class="form-control" placeholder="Email Address"
+              autofocus="true" value="<%= qs.person %>"/>
+    <!-- <input name="roles" type="text" class="form-control" placeholder="roles" value="<%= qs.person %>"/> -->
+    <input name="class" type="text" id="class" class="form-control" placeholder="Class" value="<%= qs.class %>"/>
+    <input name="parentPhoneNo" id="parentPhoneNo" type="text" class="form-control" placeholder="Parent Phone Number" value="<%= qs.parentPhoneNo %>"/>
+    <button class="btn btn-lg btn-primary btn-block" id="submit" onclick="submit()" type="submit" value="submit">Register</button>
+    <!-- <button class="btn btn-lg btn-primary btn-block" type="submit" value="submit" href='/login'>Register</button> -->
+    <div style="margin-bottom:10px;margin-top:15px"> already have a account? <a href='/login'>Login</a></div>
+
+</form>
+  <!-- <form method="POST" action="/login"  >
+      <h2>Log in </h2>
+
+      <input name="email" type="text" class="form-control" placeholder="Email Address"
+              autofocus="true"/>
+      <input name="password" type="password" class="form-control" placeholder="Password"/>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+          
+      <div style="margin-bottom:10px;margin-top:15px"> Don't have an account? <a href='/register'>Sign up</a></div>
+    
+  </form> -->
+</div>
+
+<script>
+  document.getElementById("submit").onclick = submit;
+    function submit(){
+        var email = $('#email').val()
+        var password = $('#password').val()
+        var name = $('#name').val()
+        var parentPhoneNo = $('#parentPhoneNo').val()
+        var _class = $('#class').val()
+        const classValidator = /^([0-1]?[0-9]|20)$/;
+        const emailValidator = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            
+
+        if(name.trim() == ''){
+          swal("something went wrong.!","Enter full name!");
+        }else if(password.trim() == '' || password.trim().length < 8){
+          swal("something went wrong.!","Enter password, atleast 8 digits long and in between 16 digits range!");
+        }else if(parentPhoneNo.trim() == '' || parentPhoneNo.trim().length < 10 || parentPhoneNo.trim().length > 10){
+          if(parentPhoneNo.trim().length == 10){
+            var re = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            if(!re.test(parentPhoneNo)){
+              swal("something went wrong.!","enter a valid Parent Phone Number !");
+            }
+          }else{
+            swal("something went wrong.!","Parent Phone Number must be 10 digits !");
+          }
+        }else if( _class.trim() == ''){
+          swal("something went wrong.!","enter class");
+        }else if( _class.trim() != '' && !classValidator.test(_class.trim()) ){
+          swal("something went wrong.!","enter a valid class");
+        }else if(email.trim() == ''){
+          swal("something went wrong.!","Enter email address!");
+        }else if(email.trim() !=''  && !emailValidator.test(email.trim()) ){
+          swal("something went wrong.!","enter a valid email address");
+        }else{
+          window.location.href = '/login';
+          swal("successfully registered!");
+        }
+      }   
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
+</body>
+<style>
+input{
+  margin-bottom: 15px
+}
+h2{
+  text-align: center;
+  margin-top: 170px;
+}
+.container{
+  width:50%
+}
+</style>
+</html>
+<!-- end document-->

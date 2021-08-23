@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="assets/css/aboutUs.css">
+
+  <title>Daily Dose</title>
+  <link rel="stylesheet" href="assets/css/rightnavbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.cdnfonts.com/css/cera-compact-pro" rel="stylesheet">
+                
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="#">
+  <meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+  <meta name="author" content="#">
+  <!-- Favicon icon -->
+
+  <!-- Google font-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+  <!-- Required Fremwork -->
+  <link rel="stylesheet" type="text/css" href="bower_components\bootstrap\css\bootstrap.min.css">
+  <!-- feather Awesome -->
+  <link rel="stylesheet" type="text/css" href="assets\icon\feather\css\feather.css">
+  <!-- Style.css -->
+  <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+  <link rel="stylesheet" type="text/css" href="assets\css\jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" type="text/css" href="assets\pages\social-timeline\timeline.css">
+
+
+  <!-- custom.css -->
+  <link rel="stylesheet" href="./assets/css/rightSideNav.css">
+  <link rel="stylesheet" href="./assets/css/homePageCards.css">
+  <link rel="stylesheet" href="./assets/css/about_you.css">
+  <!-- <link rel="stylesheet" href="./assets/css/daily_news.css"> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+</head>
+
+<body>
+  <!-- Pre-loader start -->
+  <div class="theme-loader">
+    <div class="ball-scale">
+      <div class='contain'>
+        <div class="ring">
+          <div class="frame"></div>
+        </div>
+        <div class="ring">
+          <div class="frame"></div>
+        </div>
+        <div class="ring">
+          <div class="frame"></div>
+        </div>
+        <div class="ring">
+          <div class="frame"></div>
+        </div>
+        <div class="ring">
+          <div class="frame"></div>
+        </div>
+        <div class="ring">
+          <div class="frame"></div>
+        </div>
+        <div class="ring">
+          <div class="frame"></div>
+        </div>
+        <div class="ring">
+          <div class="frame"></div>
+        </div>
+        <div class="ring">
+          <div class="frame"></div>
+        </div>
+        <div class="ring">
+          <div class="frame"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Pre-loader end -->
+  <div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+
+
+      <header class="navbar header-navbar pcoded-header">
+        <div class="navbar-wrapper">
+
+          <nav class="btn-pluss-wrapper1">
+            <div href="#" class="btn-pluss rightbar">
+              <ul>
+                      <li><img class="img1" src="./assets/images/tests.svg" alt="tests">
+                      </li>
+                      <li><img class="img2" src="./assets/images/quizzes.svg" alt="quizzes"></li>
+                      <li><img class="img3" src="./assets/images/classes.svg" alt="classes"></li>
+                    </ul>
+            </div>
+          </nav>
+          <div class="navbar-logo">
+            <a class="mobile-menu" id="mobile-collapse" href="#!">
+              <i class="feather icon-menu"></i>
+              <a class="right_bar" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;<span class="notinav bg-c-pink">5</span></a>
+
+            </a>
+
+            <a href="home.html">
+              <img class="logo" src="assets\images\logo.webp" alt="Theme-Logo">
+
+            </a>
+
+            <a class="mobile-options">
+              <i class="feather icon-more-horizontal"></i>
+            </a>
+          </div>
+
+
+
+          <div class="navbar-container container-fluid">
+            <ul class="nav-left">
+
+              <li>
+                <a href="#!" onclick="javascript:toggleFullScreen()">
+                  <i class="feather icon-maximize full-screen"></i>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav-right">
+              <li class="header-search">
+                <div class=" morphsearch-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..">
+                    <span class="input-group-addon search-btn"><i class="feather icon-search"></i></span>
+                  </div>
+                </div>
+              </li>
+              <a href=""><button class="recharge">Purchase Coins</button></a>
+              <li class="header-notification">
+                <div class="dropdown-primary dropdown">
+                  <div class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="feather icon-bell"></i>
+                    <span class="badge bg-c-pink">5</span>
+                  </div>
+                  <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                    <li>
+                      <h6>Notifications</h6>
+                      <label class="label label-danger">New</label>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <img class="d-flex align-self-center img-radius" src="assets\images\avatar-4.webp" alt="Generic placeholder image">
+                        <div class="media-body">
+                          <h5 class="notification-user" style="padding: 26px;"><%=name%></h5>
+                          <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                          <span class="notification-time">30 minutes ago</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <img class="d-flex align-self-center img-radius" src="assets\images\avatar-3.webp" alt="Generic placeholder image">
+                        <div class="media-body">
+                          <h5 class="notification-user">Joseph William</h5>
+                          <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                          <span class="notification-time">30 minutes ago</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <img class="d-flex align-self-center img-radius" src="assets\images\avatar-4.webp" alt="Generic placeholder image">
+                        <div class="media-body">
+                          <h5 class="notification-user">Sara Soudein</h5>
+                          <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                          <span class="notification-time">30 minutes ago</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <nav class="btn-pluss-wrapper">
+
+                  <div href="#" class="btn-pluss rightbar">
+                    <ul>
+                      <li><img class="img1" src="./assets/images/tests.svg" alt="tests">
+                      </li>
+                      <li><img class="img2" src="./assets/images/quizzes.svg" alt="quizzes"></li>
+                      <li><img class="img3" src="./assets/images/classes.svg" alt="classes"></li>
+                    </ul>
+                  </div>
+                </nav>
+              </li>
+              <li class="user-profile header-notification">
+                <div class="dropdown-primary dropdown">
+                  <div class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="assets\images\avatar-4.webp" class="img-radius" alt="User-Profile-Image">
+                    <span style="padding: 26px;"><%=name%></span>
+                    <i class="feather icon-chevron-down"></i>
+                  </div>
+                  <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+
+                    <li>
+                      <a href="/welcome">
+                        <i class="feather icon-log-out"></i> Logout
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </header>
+      <ul class="Dropdown_content Dropdown_content1 ">
+        <h6>Upcoming Tests 1</h6>
+        <li>
+          <h2>
+            <h6>Topic name 1</h6>
+          <p>
+            10 Oct 2020</p>
+        </li>
+        <li>
+          <h2>
+            <h6>Topic name 2</h6>
+          <p>
+            11 Oct 2020</p>
+        </li>
+        <li>
+          <h2>
+            <h6>Topic name 2</h6>
+          <p>
+            12 Oct 2020</p>
+        </li>
+        <li>
+          <h2>
+            <h6>Topic name 2</h6>
+          <p>
+            13 Oct 2020</p>
+        </li>
+      </ul>
+	  
+	  <ul class="Dropdown_content Dropdown_content2">
+        <h6>Upcoming Tests 2</h6>
+        <li>
+          <h2>
+            <h6>Topic name 1</h6>
+          <p>
+            10 Oct 2020</p>
+        </li>
+        <li>
+          <h2>
+            <h6>Topic name 2</h6>
+          <p>
+            11 Oct 2020</p>
+        </li>
+        <li>
+          <h2>
+            <h6>Topic name 2</h6>
+          <p>
+            12 Oct 2020</p>
+        </li>
+        <li>
+          <h2>
+            <h6>Topic name 2</h6>
+          <p>
+            13 Oct 2020</p>
+        </li>
+      </ul>
+	  
+	  <ul class="Dropdown_content Dropdown_content3">
+        <h6>Upcoming Tests 3</h6>
+        <li>
+          <h2>
+            <h6>Topic name 1</h6>
+          <p>
+            10 Oct 2020</p>
+        </li>
+        <li>
+          <h2>
+            <h6>Topic name 2</h6>
+          <p>
+            11 Oct 2020</p>
+        </li>
+        <li>
+          <h2>
+            <h6>Topic name 2</h6>
+          <p>
+            12 Oct 2020</p>
+        </li>
+        <li>
+          <h2>
+            <h6>Topic name 2</h6>
+          <p>
+            13 Oct 2020</p>
+        </li>
+      </ul>
+
+
+      <div class="pcoded-main-container">
+
+        <div class="pcoded-wrapper">
+          <nav class="pcoded-navbar">
+            <div class="pcoded-inner-navbar main-menu">
+
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class=" ">
+                      <a href="/student_dashboard">
+                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                        <span class="pcoded-mtext">Home</span>
+                      </a>
+    
+                    </li>
+                    <li class="pcoded-hasmenu">
+                      <a href="/student_material">
+                        <span class="pcoded-micon"><i class="fa fa-book"></i></span>
+                        <span class="pcoded-mtext">Study Material</span>
+                        <!--<span class="pcoded-badge label label-warning">NEW</span>-->
+                      </a>
+                      <!--<ul class="pcoded-submenu">
+                        <li class=" ">
+                          <a href="suggested_topics.html">
+                            <span class="pcoded-mtext">Suggested Topics</span>
+                          </a>
+    
+                        </li>
+                        <li class=" ">
+                          <a href="suggested_modules.html">
+                            <span class="pcoded-mtext">Suggested Modules</span>
+                          </a>
+    
+                        </li>
+                        <li class=" ">
+                          <a href="flash_cards.html">
+                            <span class="pcoded-mtext">Flash Cards</span>
+                          </a>
+                        </li>
+                        <li class=" ">
+                          <a href="trending_topics.html">
+                            <span class="pcoded-mtext">Trending Topics</span>
+                          </a>
+                        </li> 
+    
+                      </ul>-->
+                    </li>
+                    <li>
+                      <a href="/student_test">
+                        <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                        <span class="pcoded-mtext">Mock Test</span>
+                      </a>
+                    </li>
+                    <!-- <li class="pcoded-hasmenu"> -->
+                      <!-- <a href="#">
+                        <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                        <span class="pcoded-mtext">Mock Test</span>
+                      </a> -->
+                      <!-- <ul class="pcoded-submenu">
+                        <li class=" ">
+                          <a href="live_test.html">
+                            <span class="pcoded-mtext">Live Test</span>
+                            <span class="pcoded-badge label label-danger">Live</span>
+                          </a>
+                        </li>
+                        <li class=" ">
+                          <a href="free_test.html">
+                            <span class="pcoded-mtext">Free Test</span>
+                          </a>
+                        </li>
+                        <li class=" ">
+                          <a href="suggested_test.html">
+                            <span class="pcoded-mtext">Suggested Test</span>
+                          </a>
+                        </li>
+                        <li class=" ">
+                          <a href="upcomming_test.html">
+                            <span class="pcoded-mtext">Upcoming Test</span>
+                          </a>
+                        </li>
+    
+    
+                      </ul> -->
+                    <!-- </li> -->
+                  </ul>
+                  <hr size="4" width="90%" color="Grey">
+                  <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu">
+                      <a href="/student_videos?id=<%=user_id%>">
+                        <span class="pcoded-micon"><i class="fa fa-newspaper-o"></i></span>
+                        <span class="pcoded-mtext">Videos</span>
+                      </a>
+                    </li>
+                    <!--<li class=" ">
+                      <a href="mcqfy/index.html">
+                        <span class="pcoded-micon"><img class="mcq" src="assets/images/mcqfy.svg"></span>
+                        <span class="pcoded-mtext">MCQfy</span>
+                        <span class="pcoded-badge label label-danger">Play & Win</span>
+                      </a>
+    
+                    </li>-->
+    
+    
+                    <!--<li>
+                      <a href="clear_doubts.html">
+                        <span class="pcoded-micon"><i class="fa fa-question-circle-o"></i></span>
+                        <span class="pcoded-mtext">Clear Doubts</span>
+                      </a>
+    
+                    </li>
+                    <li>
+                      <a href="calander.html">
+                        <span class="pcoded-micon"><i class="fa fa-calendar"></i></span>
+                        <span class="pcoded-mtext">Exam Calendar</span>
+                      </a>
+    
+                    </li>-->
+                  </ul>
+                  <hr size="12px" width="90%" color="Grey">
+                  <ul class="pcoded-item pcoded-left-item">
+                    <li class=" ">
+                      <a href="/about_you">
+                        <span class="pcoded-micon"><i class="fa fa-user"></i></span>
+                        <span class="pcoded-mtext">About You</span>
+                      </a>
+                      <!-- <ul class="pcoded-submenu">
+                                            <li class=" ">
+                                                <a href="#">
+                                                    <span class="pcoded-mtext">Profile</span>
+                                                </a>
+                                            </li>
+                                            <li class=" ">
+                                                <a href="#">
+                                                    <span class="pcoded-mtext">Your Saved Question</span>
+                                                </a>
+                                            </li>
+                                            <li class=" ">
+                                                <a href="#">
+                                                    <span class="pcoded-mtext">Your Activty</span>
+                                                </a>
+                                            </li>
+    
+                                        </ul> -->
+                    </li>
+    
+                    <li class="">
+                      <a href="/student_assignment">
+                        <span class="pcoded-micon"><i class="fa fa-book"></i></span>
+                        <span class="pcoded-mtext">Assignments</span>
+    
+                      </a>
+                      <!-- <ul class="pcoded-submenu">
+                                            <li class=" ">
+                                                <a href="#">
+                                                    <span class="pcoded-mtext">Purchase Coins</span>
+                                                </a>
+                                            </li>
+                                            <li class=" ">
+                                                <a href="#">
+                                                    <span class="pcoded-mtext">My Transactions</span>
+                                                </a>
+                                            </li>
+                                            <li class=" ">
+                                                <a href="#">
+                                                    <span class="pcoded-mtext">Spent Analyser</span>
+                                                </a>
+                                            </li>
+    
+                                        </ul>-->
+                    </li>
+                   <!-- <li class="">
+                      <a href="sticky_notes.html">
+                        <span class="pcoded-micon"><i class="fa fa-sticky-note-o"></i></span>
+                        <span class="pcoded-mtext">Sticky Notes</span>
+    
+                      </a>
+    
+                    </li> -->
+                  </ul>
+          </nav>
+          <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+              <div class="main-body">
+                <div class="page-wrapper">
+
+                  <!-- Post Data Here    -->
+				  
+				  <div class="container1">
+
+					<div class="col-4">
+							  <div class="card user">
+								
+								<div class="card-body">
+								  <img class="card-img-top user1" src="assets/images/user.webp" alt="Card image cap">
+								  <p class="card-text1"><%=name%></p>
+								</div>
+							  </div>
+							</div>
+				  </div>
+          <br/><br/><br/><br/><br/><br/>
+							<!-- <div class="col-2">
+							  <div class="card-body bg1">
+								  <div class="center"> <img class="card-img-top" src="assets/images/coins.svg" alt="Card image cap"></div><span class="points1">10,00,000</span>
+								  <p class="card-text">COINS</p>
+								
+							  </div>
+							</div>
+
+							<div class="col-2">
+							  <div class="card-body bg2">
+								  <div class="center"> <img class="card-img-top" src="assets/images/coins.svg" alt="Card image cap"></div><span class="points1">TOPPER</span>
+								  <p class="card-text ">BADGE</p>
+							  </div>
+							</div>
+
+							<div class="col-2">
+							  <div class="card-body bg3">
+								  <div class="center"> <img class="card-img-top" src="assets/images/coins.svg" alt="Card image cap"></div><span class="points1">138</span>
+								  <p class="card-text ">RANK</p>
+							  </div>
+							</div>
+
+							<div class="col-2">
+							  <div class="card-body bg4">
+								  <div class="center"> <img class="card-img-top" src="assets/images/coins.svg" alt="Card image cap"></div><span class="points1">100</span>
+								  <p class="card-text">GUESTS</p></div>
+							  </div> -->
+							</div>
+                  </div>
+              </div>
+                  <div class="card social-tabs">
+                    <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#timeline" role="tab">Profile</a>
+                        <div class="slide"></div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#photos" role="tab">Batches you are enrolled in</a>
+                        <div class="slide"></div>
+                      </li>
+                    </ul>
+
+                  <div class="tab-content">
+
+                    <!-- Profile Starts here -->
+
+                    <div class="tab-pane active" id="timeline">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="card">
+                            <div class="card-header">
+                              <h5 class="card-header-text">Basic Information</h5>
+                              <button id="edit-btn" type="button" class="btn btn-primary waves-effect waves-light f-right">
+                                <img src="assets/images/pen.webp" alt="">
+                              </button>
+                            </div>
+                            <div class="card-block">
+                              <div id="view-info" class="row">
+                                <div class="col-lg-6 col-md-12">
+                                  <form>
+                                    <table class="table table-responsive m-b-0">
+                                      <tr>
+                                        <th class="social-label b-none p-t-0">Full Name
+                                        </th>
+                                        <td class="social-user-name b-none p-t-0 text-muted"><%=name%></td>
+                                      </tr>
+                                      <!--<tr>
+                                        <th class="social-label b-none">Gender</th>
+                                        <td class="social-user-name b-none text-muted">-</td>
+                                      </tr>
+                                      <tr>
+                                        <th class="social-label b-none">Birth Date</th>
+                                        <td class="social-user-name b-none text-muted">-</td>
+                                      </tr>
+                                      <tr>
+                                        <th class="social-label b-none">Martail Status</th>
+                                        <td class="social-user-name b-none text-muted">-</td>
+                                      </tr>
+                                      <tr>
+                                        <th class="social-label b-none p-b-0">Location</th>
+                                        <td class="social-user-name b-none p-b-0 text-muted">-</td>
+                                      </tr>-->
+                                    </table>
+                                  </form>
+                                </div>
+                              </div>
+                              <!--<div id="edit-info" class="row">
+                                <div class="col-lg-12 col-md-12">
+                                  <form>
+                                    <div class="input-group">
+                                      <input type="text" class="form-control" placeholder="Full Name">
+                                    </div>
+                                    <div class="input-group">
+                                      <div class="form-radio">
+                                        <div class="form-radio">
+                                          <label class="md-check p-0">Gender</label>
+                                          <div class="radio radio-inline">
+                                            <label>
+                                              <input type="radio" name="radio" checked="checked">
+                                              <i class="helper"></i>Male
+                                            </label>
+                                          </div>
+                                          <div class="radio radio-inline">
+                                            <label>
+                                              <input type="radio" name="radio">
+                                              <i class="helper"></i>Female
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="input-group">
+                                      <input id="dropper-default" class="form-control" type="text" placeholder="Birth Date">
+                                    </div>
+                                    <div class="input-group">
+                                      <select id="hello-single" class="form-control">
+                                        <option value="">---- Marital Status ----</option>
+                                        <option value="married">Married</option>
+                                        <option value="unmarried">Unmarried</option>
+                                      </select>
+                                    </div>
+                                    <div class="md-group-add-on">
+                                      <textarea rows="5" cols="5" class="form-control" placeholder="Address..."></textarea>
+                                    </div>
+                                    <div class="text-center m-t-20">
+                                      <a href="javascript:;" id="edit-save" class="btn btn-primary waves-effect waves-light m-r-20">Save</a>
+                                      <a href="javascript:;" id="edit-cancel" class="btn btn-default waves-effect waves-light">Cancel</a>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>-->
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="card">
+                            <div class="card-header">
+                              <h5 class="card-header-text">Your Details</h5>
+                              <button id="edit-Contact" type="button" class="btn btn-primary waves-effect waves-light f-right">
+                                <img src="assets/images/pen.webp" alt="">
+                              </button>
+                            </div>
+                            <div class="card-block">
+                              <div id="contact-info" class="row">
+                                <div class="col-lg-6 col-md-12">
+                                  <table class="table table-responsive m-b-0">
+                                    <tr>
+                                      <th class="social-label b-none p-t-0">Mobile Number</th>
+                                      <td class="social-user-name b-none p-t-0 text-muted"><%=parentPhoneNo%></td>
+                                    </tr>
+                                    <tr>
+                                      <th class="social-label b-none">Email Address</th>
+                                      <td class="social-user-name b-none text-muted"><%=email%></td>
+                                    </tr>
+                                    <!--<tr>
+                                      <th class="social-label b-none">Twitter</th>
+                                      <td class="social-user-name b-none text-muted">-</td>
+                                    </tr>
+                                    <tr>
+                                      <th class="social-label b-none p-b-0">Skype</th>
+                                      <td class="social-user-name b-none p-b-0 text-muted">-</td>
+                                    </tr>-->
+                                  </table>
+                                </div>
+                              </div>
+                              <!--<div id="edit-contact-info" class="row">
+                                <div class="col-lg-12 col-md-12">
+                                  <form>
+                                    <div class="input-group">
+                                      <input type="text" class="form-control" placeholder="Mobile number">
+                                    </div>
+                                    <div class="input-group">
+                                      <input type="text" class="form-control" placeholder="Email address">
+                                    </div>
+                                    <div class="input-group">
+                                      <input type="text" class="form-control" placeholder="Twitter id">
+                                    </div>
+                                    <div class="input-group">
+                                      <input type="text" class="form-control" placeholder="Skype id">
+                                    </div>
+                                    <div class="text-center m-t-20">
+                                      <a href="javascript:;" id="contact-save" class="btn btn-primary waves-effect waves-light m-r-20">Save</a>
+                                      <a href="javascript:;" id="contact-cancel" class="btn btn-default waves-effect waves-light">Cancel</a>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>-->
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!-- Profile Ends here       -->
+
+                    <!-- Your Activity Starts here -->
+
+                    <!--<div class="tab-pane" id="about">
+                      <div class="row">
+                        <div class="col-md-12 timeline-dot">
+                          <div class="social-timelines p-relative">
+                            <div class="row timeline-right p-t-35">
+                              <div class="col-2 col-sm-2 col-xl-1">
+                                <div class="social-timelines-left">
+                                  <div class="month">
+                                    January
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-10 col-sm-10 col-xl-11 p-l-5 p-b-35">
+                                <div class="card">
+                                  <div class="card-block">
+
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                                    anim id est laborum.
+
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="social-timelines p-relative">
+                            <div class="row timeline-right p-t-35">
+                              <div class="col-2 col-sm-2 col-xl-1">
+                                <div class="social-timelines-left">
+                                  <div class="month">
+                                    February
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-10 col-sm-10 col-xl-11 p-l-5 p-b-35">
+                                <div class="card">
+                                  <div class="card-block">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                                    anim id est laborum.
+                                  </div>
+
+                                  <img src="assets\images\timeline\img1.webp" class="img-fluid width-100" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>-->
+
+                    <!-- Your Activity end here         -->
+
+
+                    <!-- You Saved Questions start -->
+
+
+
+                    <div class="tab-pane" id="photos">
+
+
+                      <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="row mb-4">
+                                <% if(branchData.length > 0){ %>
+                                  <% for(var branch of branchData){ %>
+                                
+                                    <div class="col-2">
+                                      <div class="card-body bg1">
+                                              <div class="card-flyer" >
+                                                  <div class="text-box Wrapper" >
+                                                      <div class="text-container tr" >
+                                                          <h6 ><%=branch.code%></h6>
+                                                          <h4>CLASS: <%=branch._class%></h4>
+                                                          <p>TITLE: <%=branch.title%></p>
+                                                          <p><%=branch.start_date%></p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </a>
+                                      </div>
+                                    </div>
+                                    <% } %>
+                                  <% } else{ %>  
+                                    <div class="col-2">
+                                      <div class="card-body bg1">
+                                        <p><strong>no batches found</strong></p>
+                                      </div>
+                                    </div>
+                                  <% } %>
+                          <!--<div class="card-header" id="headingOne">
+                            <p class="rank">1 of 3<i class="fa fa-bookmark"></i></p>
+                            <p class="middle-line">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                              mollit anim id est laborum.</p>
+                            <h2 class="mb-0">
+                              <button class="btn btn-link answer" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                View Options
+                              </button>
+                            </h2>
+                          </div>
+
+                          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body mcq1">
+                              <div class="card">
+                                <p class="top-line">Mumbai </p>
+                              </div>
+                              <div class="card">
+                                <p class="top-line">Kolkata </p>
+                              </div>
+                              <div class="card">
+                                <p class="top-line">New Delhi </p>
+                              </div>
+                              <div class="card">
+                                <p class="top-line">Chennai </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingSecond">
+                            <p class="rank">1 of 3<i class="fa fa-bookmark"></i></p>
+                            <p class="middle-line">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                              mollit anim id est laborum.</p>
+                            <h2 class="mb-0">
+                              <button class="btn btn-link answer" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
+                                View Options
+                              </button>
+                            </h2>
+                          </div>
+
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body mcq1">
+                              <div class="card">
+                                <p class="top-line">Mumbai </p>
+                              </div>
+                              <div class="card">
+                                <p class="top-line">Kolkata </p>
+                              </div>
+                              <div class="card">
+                                <p class="top-line">New Delhi </p>
+                              </div>
+                              <div class="card">
+                                <p class="top-line">Chennai </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingThree">
+                            <p class="rank">1 of 3<i class="fa fa-bookmark"></i></p>
+                            <p class="middle-line">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                              mollit anim id est laborum.</p>
+                            <h2 class="mb-0">
+                              <button class="btn btn-link answer" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseOne">
+                                View Options
+                              </button>
+                            </h2>
+                          </div>
+
+                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body mcq1">
+                              <div class="card">
+                                <p class="top-line">Mumbai </p>
+                              </div>
+                              <div class="card">
+                                <p class="top-line">Kolkata </p>
+                              </div>
+                              <div class="card">
+                                <p class="top-line">New Delhi </p>
+                              </div>
+                              <div class="card">
+                                <p class="top-line">Chennai </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>-->
+                    <!-- Saved Question tab end -->
+
+
+                    <!-- Invite Friends start -->
+
+
+
+                    <!--<div class="tab-pane" id="friends">
+
+                      <div class="row top-content d-flex justify-content-center">
+                        <div class="col-lg-6 col-sm-12">
+                          <div class="top-content__heading">
+                            <div class="h1">Learn Together. Earn Together.</div>
+                            <p>
+                              Invite your friends to join Testbook.com.
+                              More you refer, More the chances to Win Cash Prizes worth Rs. 50,000, instant paytm cashbacks &amp; assured Testbook Pass Access.
+                            </p>
+                          </div>
+                          <div class="row email">
+                            <p class="invite">Email/Mobile Invites</p>
+                            <p class="gmail">Invite Contacts from <svg id="Layer_1" x="0px" y="0px" style="enable-background:new 0 0 512 512;" xml:space="preserve" viewBox="0 0 512 512">
+                                <g fill="#f2f2f2">
+                                  <path d="M484.973 122.808l-32.685 328.209H59.712L33.379 129.16 256 253.802z"></path>
+                                  <path d="M473.886 60.983L256 265.659 38.114 60.983H256z"></path>
+                                </g>
+                                <path d="M59.712 155.493v295.524H24.139C10.812 451.017 0 440.206 0 426.878V111.967l39 1.063 20.712 42.463z" fill="#f14336"></path>
+                                <path d="M512 111.967v314.912c0 13.327-10.812 24.139-24.152 24.139h-35.56V155.493l19.692-46.525 40.02 2.999z" fill="#d32e2a"></path>
+                                <path d="M512 85.122v26.845l-59.712 43.526L256 298.561 59.712 155.493 0 111.967V85.122c0-13.327 10.812-24.139 24.139-24.139h13.975L256 219.792 473.886 60.983h13.962c13.34 0 24.152 10.811 24.152 24.139z" fill="#f14336">
+                                </path>
+                                <path fill="#d32e2a" d="M59.712 155.493L0 146.235v-34.268z"></path>
+                              </svg> Gmail</p>
+                          </div>
+
+
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button">Invite</button>
+                            </div>
+                          </div>-->
+                          <!-- ngIf: tbReferral.isLoggedIn -->
+                          <!--<div class="row">
+                            <div class="col-6">
+                              <p>Your Invite Link</p>
+                              <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                  <button class="btn btn-outline-secondary" type="button">Copy</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <p>Your Invite Code</p>
+                              <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                  <button class="btn btn-outline-secondary" type="button">Copy</button>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                          <div class="flex-container">
+                            <div class="">
+                              <svg width="8" height="15" viewBox="0 0 8 15" ng-click="tbReferral.FB.shareBtnClicked()">
+                                <path fill="#3C5A96" fill-rule="evenodd"
+                                  d="M6.245 2.531c.465-.016.929-.003 1.395-.004h.192V.11C7.583.085 7.324.049 7.064.037 6.588.016 6.11-.01 5.633.003c-.729.015-1.418.193-2.02.624-.69.497-1.07 1.194-1.214 2.018-.06.34-.075.692-.084 1.038-.013.542-.002 1.084-.002 1.627v.203H0v2.7h2.3V15h2.81V8.224H7.4l.354-2.713h-.516c-.651.003-2.148 0-2.148 0s.006-1.337.023-1.918c.022-.796.494-1.038 1.131-1.062">
+                                </path>
+                              </svg>
+                            </div>
+                            <div class="">
+                              <svg width="20" height="20" viewBox="0 0 20 20" ng-click="tbReferral.Whatsapp.shareBtnClicked()">
+                                <g fill="none" fill-rule="evenodd">
+                                  <path fill="#FFF" d="M0 20l1.38-5A10.082 10.082 0 0 1 0 9.931C0 4.483 4.483 0 9.966 0 15.448 0 20 4.483 20 9.931 20 15.379 15.448 20 9.966 20c-1.725 0-3.38-.552-4.863-1.38L0 20z"></path>
+                                  <path fill="#55CD6C" fill-rule="nonzero"
+                                    d="M5.38 16.828l.31.172c1.276.793 2.758 1.276 4.31 1.276 4.517 0 8.276-3.759 8.276-8.345s-3.759-8.207-8.31-8.207c-4.552 0-8.242 3.655-8.242 8.207 0 1.586.448 3.138 1.276 4.448l.207.31-.793 2.897 2.965-.758z">
+                                  </path>
+                                  <path fill="#FFF"
+                                    d="M7.31 5.31l-.655-.034a.783.783 0 0 0-.552.207c-.31.276-.827.793-.965 1.483C4.897 8 5.276 9.24 6.172 10.483c.897 1.241 2.621 3.241 5.656 4.103.965.276 1.724.104 2.344-.276.483-.31.794-.793.897-1.31l.103-.483a.347.347 0 0 0-.172-.38l-2.172-1a.329.329 0 0 0-.414.104l-.862 1.104a.27.27 0 0 1-.276.069c-.586-.207-2.552-1.035-3.62-3.104-.035-.103-.035-.207.034-.276l.827-.93c.07-.104.104-.242.07-.345l-1-2.242a.3.3 0 0 0-.277-.207">
+                                  </path>
+                                </g>
+                              </svg>
+                            </div>
+
+                            <div class="">
+                              <svg width="18" height="14" viewBox="0 0 18 14" ng-click="tbReferral.Gmail.shareBtnClicked()">
+                                <g fill="none" fill-rule="nonzero">
+                                  <g fill="#F2F2F2">
+                                    <path d="M17.05 2.243L15.9 13.965H2.1L1.172 2.47 9 6.921z"></path>
+                                    <path d="M16.66.035L9 7.345 1.34.035H9z"></path>
+                                  </g>
+                                  <path fill="#F14336" d="M2.1 3.41v10.555H.848A.856.856 0 0 1 0 13.103V1.856l1.371.038L2.1 3.41z"></path>
+                                  <path fill="#D32E2A" d="M18 1.856v11.247c0 .476-.38.862-.85.862H15.9V3.41l.693-1.661L18 1.856z"></path>
+                                  <path fill="#F14336" d="M18 .897v.959L15.9 3.41 9 8.52 2.1 3.41 0 1.856V.897C0 .421.38.035.849.035h.49L9 5.707 16.66.035h.49c.47 0 .85.386.85.862z"></path>
+                                  <path fill="#D32E2A" d="M2.1 3.41L0 3.08V1.856z"></path>
+                                </g>
+                              </svg>
+                            </div>
+                            <div class="">
+                              <svg width="20" height="16" viewBox="0 0 20 16" ng-click="tbReferral.Twitter.shareBtnClicked()">
+                                <path fill="#03A9F4" fill-rule="nonzero"
+                                  d="M20 1.894a8.653 8.653 0 0 1-2.363.638A4.026 4.026 0 0 0 19.441.3a8.272 8.272 0 0 1-2.6.978A4.139 4.139 0 0 0 13.846 0C11.576 0 9.75 1.814 9.75 4.038c0 .32.027.628.095.92A11.666 11.666 0 0 1 1.393.737a4.017 4.017 0 0 0-.562 2.04 4.03 4.03 0 0 0 1.821 3.356A4.098 4.098 0 0 1 .8 5.634v.045C.8 7.64 2.221 9.27 4.085 9.646a4.15 4.15 0 0 1-1.075.132 3.68 3.68 0 0 1-.776-.068 4.132 4.132 0 0 0 3.831 2.812 8.32 8.32 0 0 1-5.084 1.722A7.72 7.72 0 0 1 0 14.188 11.674 11.674 0 0 0 6.29 16c7.545 0 11.67-6.154 11.67-11.488 0-.178-.006-.35-.015-.522A8.111 8.111 0 0 0 20 1.894z">
+                                </path>
+                              </svg>
+                            </div>
+
+
+                          </div>-->
+
+
+                          <!-- end ngIf: tbReferral.isLoggedIn -->
+                          <!-- ngIf: !tbReferral.isPaidUser && tbReferral.isLoggedIn 
+                          <div class="form-group mb-1 on-borading-template ng-scope" ng-if="!tbReferral.isPaidUser &amp;&amp; tbReferral.isLoggedIn">-->
+                            <!-- ngIf: !tbReferral.showReferralBox && !tbReferral.isValidReferral 
+                            <div ng-if="!tbReferral.showReferralBox &amp;&amp; !tbReferral.isValidReferral" class="ng-scope">
+                              <button style="color: #00988b !important;" type="button" class="btn outline-none  btn-xs btn-link display-6 ng-scope" ng-click="tbReferral.enterReferral()" translate="">I have a Referral Code!</button>
+                            </div>--><!-- end ngIf: !tbReferral.showReferralBox && !tbReferral.isValidReferral -->
+                            <!-- ngIf: tbReferral.showReferralBox && !tbReferral.isValidReferral -->
+                            <!-- ngIf: tbReferral.isReferralChecked && tbReferral.isValidReferral -->
+                          </div><!-- end ngIf: !tbReferral.isPaidUser && tbReferral.isLoggedIn -->
+                        </div>
+                        <!-- <div class="col-md-5 offset-md-1 col-12">
+                          <div class="container">
+                              <h3>How it works</h3>
+
+                          </div>
+                        </div> -->
+                      </div>
+
+                    </div>
+
+                    <!-- Invite friends End -->
+
+                  </div>
+
+                </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <br>
+    <br>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a>
+      <div class="topnav"><input type="text" placeholder="Search.."></div>
+    </a>
+
+    <div class="dropdown-primary dropdown">
+      <div class="dropdown-toggle" data-toggle="dropdown">
+        <i class="feather icon-bell"></i>
+        <span class="badge bg-c-pink">5</span>
+      </div>
+      <ul class="notimobi show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+
+        <li>
+          <h6>Notifications</h6>
+          <label class="label label-danger">New</label>
+        </li>
+        <li>
+          <div class="media">
+            <img class="d-flex align-self-center img-radius" src="assets\images\avatar-4.webp" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 style="padding: 26px;"><%=name%></h5>
+              <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+              <span class="notification-time">30 minutes ago</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="media">
+            <img class="d-flex align-self-center img-radius" src="assets\images\avatar-3.webp" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="notification-user">Joseph William</h5>
+              <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+              <span class="notification-time">30 minutes ago</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="media">
+            <img class="d-flex align-self-center img-radius" src="assets\images\avatar-4.webp" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="notification-user">Sara Soudein</h5>
+              <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+              <span class="notification-time">30 minutes ago</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <a href="/login">Purchase Coins</a><br><a href="#">Logout</a>
+  </div>
+  <!-- Required Jquery -->
+  <script data-cfasync="false" src="..\..\..\cdn-cgi\scripts\5c5dd728\cloudflare-static\email-decode.min.js"></script>
+  <script type="text/javascript" src="bower_components\jquery\js\jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components\jquery-ui\js\jquery-ui.min.js"></script>
+  <script type="text/javascript" src="bower_components\popper.js\js\popper.min.js"></script>
+  <script type="text/javascript" src="bower_components\bootstrap\js\bootstrap.min.js"></script>
+  <!-- jquery slimscroll js -->
+  <script type="text/javascript" src="bower_components\jquery-slimscroll\js\jquery.slimscroll.js"></script>
+  <!-- modernizr js -->
+  <script type="text/javascript" src="bower_components\modernizr\js\modernizr.js"></script>
+  <!-- Chart js -->
+  <script type="text/javascript" src="bower_components\chart.js\js\Chart.js"></script>
+  <!-- amchart js -->
+  <script src="assets\pages\widget\amchart\amcharts.js"></script>
+  <script src="assets\pages\widget\amchart\serial.js"></script>
+  <script src="assets\pages\widget\amchart\light.js"></script>
+  <script src="assets\js\jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript" src="assets\js\SmoothScroll.js"></script>
+  <script src="assets\js\pcoded.min.js"></script>
+  <!-- custom js -->
+  <script src="assets\js\vartical-layout.min.js"></script>
+  <script type="text/javascript" src="assets\pages\dashboard\custom-dashboard.js"></script>
+  <script type="text/javascript" src="assets\js\script.min.js"></script>
+  <script type="text/javascript" src="assets\pages\social-timeline\social.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+  </script> -->
+  <script src="./assets/js/sideBarNav.js"></script>
+  <script>
+    function openNav() {
+      var x = document.getElementById("mySidenav");
+      if (x.style.width === "100%") {
+        x.style.width = "0%";
+      } else {
+        x.style.width = "100%";
+      }
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0%";
+    }
+  </script>
+</body>
+
+</html>

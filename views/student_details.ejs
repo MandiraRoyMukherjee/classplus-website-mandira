@@ -1,0 +1,408 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Page Title</title> 
+     <script src=" https://kit.fontawesome.com/a076d05399.js"> 
+    </script> 
+    <style> 
+    [data-letters]:before {
+      content: attr(data-letters);
+    display: inline-block;
+    font-size: 3em;
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 52px;
+    text-align: center;
+    border-radius: 50%;
+    background: #3a39a2;
+    vertical-align: middle;
+    margin-right: 1em;
+    margin-left: 10px;
+    color: white;
+  }
+.card-body {
+    background: lightgrey;
+    width: 950px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.collapsible1 {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content1 {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: rgb(130, 192, 243);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid rgb(144, 165, 204);
+  border-top: none;
+}
+
+div.panel {
+    display: none;
+}
+
+div.panel.show {
+    display: block !important;
+}
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.accordion {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 77%);
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.name {
+      margin-top: -71px;
+    margin-bottom: 60px;
+    margin-left: 98px;
+    font-size: 25px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 100px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.icon1{
+  font-size: 27px;
+    padding: 10px;
+}
+
+.icon_div{
+  margin-top: -44px;
+  margin-left: 65px;
+}
+
+p.dotted {border-style: dotted;padding: 10px;}
+  </style> 
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>AdminLTE 3 | Widgets</title>
+   <link rel="stylesheet" href="student_details.css">
+ 
+   <!-- Google Font: Source Sans Pro -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head> 
+<body class="hold-transition sidebar-mini">
+	
+  <div class="card-body">
+    <p data-letters="<%=name %>">
+     <div class="name"><%=userData.name %></div>
+     <div><p style="margin-top: -63px;
+      margin-left: 100px;"><i class='far fa-comment-alt' style="font-size: 14px;
+      margin-right: 5px;
+      margin-top: -12px;"></i>chat &nbsp; <i class="far fa-envelope-open" style="margin-left: 15px;
+      font-size: 14px;
+      margin-right: 5px;"></i> send email</p></div>
+     <!-- <div>chat</div> -->
+   </p><!-- or whatever structure you used -->
+    <div class="tab" style="width: 900px; height: 48px;    margin-top: 25px;">
+        <button class="tablinks active" style="width: 120px;" onclick="openTab(event, 'active_students')">Info</button>
+        <button class="tablinks" style="width: 120px;" onclick="openTab(event, 'enrolled_batches_info')">Batches</button>
+        <button class="tablinks" style="width: 120px;" onclick="openTab(event, 'enrolled_courses_info')">Courses</button>
+        <button class="tablinks" style="width: 120px;" onclick="openTab(event, 'inactive_students')">Performance</button>
+        <button class="tablinks" style="width: 120px;" onclick="openTab(event, 'inactive_students')">Payments</button>
+        <button class="tablinks" style="width: 120px;" onclick="openTab(event, 'inactive_students')">Assignments</button>
+      </div>
+        <div id="active_students" style="display:block" class="tabcontent">
+            
+            <div class="accordion"><b>Basic Information</b></div>
+            <div class="panel">
+              <div class="row">
+                <div class="column" >
+                  <i class='fas fa-user-alt icon1'></i>
+                  <div class="icon_div">
+                    <span>Name*</span><br>
+                    <span><%=userData.name %></span>
+                  </div>                
+                </div>
+                <div class="column" >
+                  <i class="fa fa-hashtag icon1"></i>
+                  <div class="icon_div">
+                    <span>Mobile Number*</span><br>
+                    <span>9876543210</span>
+                  </div>
+                </div>
+                <div class="column" >
+                  <i class="fa fa-envelope icon1"></i>
+                  <div class="icon_div">
+                    <span>Email*</span><br>
+                    <span><%=userData.email %></span>
+                </div>
+                  
+                </div>
+                <div class="column" >
+                  <i class="fa fa-info-circle icon1"></i>
+                  <div class="icon_div">
+                    <span>About*</span><br>
+                    <span>------</span>
+                  </div>
+                </div>
+                <div class="column" >
+                    <i class="fa fa-hashtag icon1"></i>
+                    <div class="icon_div">
+                      <span>Roll Number*</span><br>
+                      <span>------</span>
+                    </div>
+                </div>
+                <div class="column" >
+                  <i class="fas fa-calendar icon1"></i>
+                  <div class="icon_div">
+                    <span>Date of joining*</span><br>
+                    <span>-------</span>
+                  </div>
+                </div>
+              </div>
+                <p class="text-light">BAsic info</p>
+            </div>
+            <div class="accordion"><b>Parents Information</b></div>
+            <div class="panel">
+                <div class="row">
+                  <div class="column" >
+                    <% if(userData.parentPhoto1){ %> 
+                      <img src="<%=userData.parentPhoto1%>" />
+                      <%}else{%>
+                    <i class='far fa-user-circle icon1'></i>
+                    <div class="icon_div">
+                        <form action="/modify_student" method="post" enctype="multipart/form-data">
+                          <i class="fa fa-plus" style="margin-left: 112px;">&nbsp;&nbsp;</i>Add Parent</p>
+                          <input type="file" name="parentPhoto1" id="fileToUpload">
+                          <input type="hidden" name="studentId" value="<%=userData._id%>">
+                          <input type="submit" value="Upload Image">
+                      </form>
+                    </div>  
+                    <%}%>              
+                  </div>
+                  <div class="column" >
+                    <% if(userData.parentPhoto2){ %> 
+                      <img src="<%=userData.parentPhoto2%>" />
+                      <%}else{%>
+                    <i class='far fa-user-circle icon1'></i>
+                    <div class="icon_div">
+                        <form action="/modify_student" method="post" enctype="multipart/form-data">
+                          <i class="fa fa-plus" style="margin-left: 112px;">&nbsp;&nbsp;</i>Add Parent</p>
+                          <input type="file" name="parentPhoto2" id="fileToUpload">
+                          <input type="hidden" name="studentId" value="<%=userData._id%>">
+
+                          <input type="submit" value="Upload Image" >
+                      </form>
+                    </div>  
+                    <%}%>              
+                  </div>
+                </div>
+            </div>
+            <div class="accordion"><b>Personal details</b></div>
+            <div class="panel">
+                <p class="text-light">Text 3</p>
+            </div>
+            <div class="accordion"><b>Address</b></div>
+            <div class="panel">
+                <div class="row">
+                  <div class="column" >
+                    <i class='far fa-map icon1'></i>
+                    <div class="icon_div">
+                      <span>Permanent Address</span><br>
+                      <span>-----------</span>
+                    </div>                
+                  </div>
+                  <div class="column" >
+                    <i class='fas fa-map-marker-alt icon1'></i>
+                    <div class="icon_div">
+                      <span>Permanent Address PIN code</span><br>
+                      <span>-----------</span>
+                    </div>
+                  </div>
+                  <div class="column" >
+                    <i class="far fa-map icon1"></i>
+                    <div class="icon_div">
+                      <span>Correspondance Address</span><br>
+                      <span>-----------</span>
+                  </div>
+                  </div>
+                  <div class="column" >
+                    <i class="fas fa-map-marker-alt icon1"></i>
+                    <div class="icon_div">
+                      <span>Correspondance Address PIN code</span><br>
+                      <span>-----------</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion"><b>Educational Details</b></div>
+            <div class="panel">
+                <p class="text-light">Text 5</p>
+            </div>
+        </div>
+        <div id="enrolled_batches_info" class="tabcontent">
+          <div class="row">
+            <% branchesData.forEach(branch=>{ %> 
+          <div class="column border-1" >
+            <i class='fas fa-chalkboard-teacher icon1'></i>
+            <div class="icon_div">
+              <span>Name*</span><br>
+              <span><%=branch.title%></span>
+              <br>
+              <span>Teacher: <%=branch.postedBy.name%></span>
+
+            </div>                
+          </div>
+          <% }) %> 
+        </div>
+        </div>
+        <div id="inactive_students" class="tabcontent">
+            <h3>inactive</h3>
+            <p>inactive .....</p>
+        </div>
+  
+  
+                  
+  </div>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+function openTab(evt, student_name) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(student_name).style.display = "block";
+  console.log('****** ',evt.currentTarget.className)
+  evt.currentTarget.className += " active";
+}
+
+
+var acc = document.getElementsByClassName("accordion");
+var panel = document.getElementsByClassName('panel');
+
+for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function() {
+    	var setClasses = !this.classList.contains('active');
+        setClass(acc, 'active', 'remove');
+        setClass(panel, 'show', 'remove');
+        
+       	if (setClasses) {
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+        }
+    }
+}
+
+function setClass(els, className, fnName) {
+    for (var i = 0; i < els.length; i++) {
+        els[i].classList[fnName](className);
+    }
+}
+
+  </script>
+  </body>
+  </html> 

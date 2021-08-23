@@ -1,0 +1,416 @@
+.card-img-top {
+    width: 40px;
+}
+
+
+		
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    border-radius: 22px;
+}
+
+body {
+	overflow: hidden;
+}
+		
+.container1 {
+    margin-top: 90px;
+}	
+			
+.points1 {
+    text-align: right;
+    width: 100%;
+    margin-right: 0px;
+    margin: -16% 0% 0 0;
+    font-size: 23px;
+	font-family: 'Cera Pro', sans-serif;
+    padding: 2px 65px;
+    color: white;
+    float: right;
+}
+
+.card-text1 {
+  color: black;
+  text-align:center;
+  font-family: 'Cera Pro', sans-serif;
+}	
+					.col-4 {
+						-ms-flex: 0 0 33.333333%;
+						flex: 0 0 33.333333%;
+						max-width: 100%;
+						padding: 0;
+						margin: -82px 0px;
+					}
+
+                    .user1 {
+						width: 100%;
+						height: 100% !important;
+						margin: 0 auto;
+						padding: 0 10%;
+					}
+
+                    .coin {
+                      top: 0px !important;
+                    }
+
+                    .card {
+						width: 100%;
+						height: 100%;
+					}
+					
+					
+					.bg1 {
+					  background: linear-gradient(to right, #0AC2F5, #0DF3ED);
+					}
+					
+					.bg2 {
+					  background: linear-gradient(to right, #0ac282, #0df3a3);
+					}
+					
+					.bg3 {
+					  background: linear-gradient(to right, #fe9365, #feb798);
+					}
+					
+					.bg4 {
+					  background: linear-gradient(to right, #eb3422, #ef5f51);
+					}
+					
+					
+
+                    .info {
+                      height: 80%;
+                    }
+
+                    .md-tabs .nav-link.active:focus,
+                    .md-tabs .nav-link.active:hover {
+                      color: #000;
+                      border: none;
+                      background-color: transparent;
+                      border-radius: 0;
+                    }
+
+                    .md-tabs .nav-item .nav-link.active~.slide {
+                      opacity: 1;
+                      background-color: red;
+                      -webkit-transition: all 0.3s ease-out;
+                      transition: all 0.3s ease-out;
+                    }
+
+                    .card-block {
+                      padding: 1.25rem;
+                      background-color: #fff;
+                    }
+
+                    
+
+                    .col-4 {
+							max-width: 100%;
+						}
+						
+
+                      .card {
+							border-radius: 10px
+							-webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+							box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+							border: none;
+							margin-bottom: 62px;
+						}
+						.user {
+							width: 200px;
+							margin: 0 auto;
+						}
+
+                    .card-text {
+						font-size: 18px;
+						text-align: left;
+						color: darkblue;
+						font-weight: bold;
+						font-family: 'Cera Pro', sans-serif;
+					}
+					
+					
+.col-2 {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-top: 93px;
+    margin-bottom: 26px;
+}
+
+
+
+                    .grid-container {
+                      display: grid;
+                      grid-template-columns: auto auto 300px auto auto;
+                      background-color: ;
+                      padding: 10px;
+                    }
+
+                    .grid-item {
+                      background-color: rgba(255, 255, 255, 0.8);
+                      padding: 20px;
+                      font-size: 30px;
+					  font-family: 'Cera Pro', sans-serif;
+                      text-align: center;
+                    }
+
+                    .table-responsive {
+                      overflow-x: unset;
+                    }
+					
+					
+					.col-md-6 {
+						-webkit-box-flex: 0;
+						-ms-flex: 0 0 50%;
+						flex: 0 0 50%;
+						max-width: 50%;
+						margin: auto;
+					}
+					
+					.p-l-5 {
+						padding-left: 60px;
+					}
+
+                    @media screen and (max-width: 1000px) {
+
+                      .grid-container {
+                        display: grid;
+                        grid-gap: 10px;
+                        grid-template-columns: 100%;
+                        padding: 10px;
+                      }
+
+                      .md-tabs .nav-item {
+						width: 25%;
+						text-align: center;
+						margin-top: 3%;
+					}
+
+                      .card-text{
+                        font-size: 12px;
+						font-family: 'Cera Pro', sans-serif;
+                      }
+					  
+					  .user1 {
+						width: 100% !important;
+						height: 100% !important;
+						margin: auto;
+						}
+						
+.col-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 40%;
+    max-width: 100%;
+    padding: 108px;
+    margin: -228px 0 -162px 0;
+}
+
+                      .user {
+                        width: 70% !important;
+                        height: 50% !important;
+                        top: 30px;
+                        margin: auto;
+                      }
+
+                      .coin {
+                        top: 25px !important;
+                      }
+                    }
+                  
+                      .top-line {
+                        padding: 2% 2%;
+                      }
+
+                      .middle-line {
+                        margin-top: 1%;
+
+                      }
+
+                      .rank {
+                        font-weight: bold;
+						font-family: 'Cera Pro', sans-serif;
+                      }
+
+                      .answer {
+                        padding-left: 0;
+                      }
+
+                      .fa-bookmark {
+                        float: right;
+                      }
+
+                      .mcq1 {
+                        background-color: #F3F5FA;
+                        width: 100%;
+                      }
+                    
+                      .top-content__heading {
+                        display: inline-block;
+                        margin: 0px 0 20px 0;
+                      }
+
+                      .h1 {
+                        font-size: 2rem;
+						font-family: 'Cera Pro', sans-serif;
+                        font-weight: 600;
+                        line-height: 3rem;
+                      }
+
+                      .ui-invite-referral .top-content .ui-invite-way {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                        font-weight: 600;
+						font-family: 'Cera Pro', sans-serif;
+                      }
+
+                      svg {
+                        width: 20px;
+                        -o-object-fit: contain;
+                        object-fit: contain;
+                      }
+
+                      .btn-success {
+                        height: 36px;
+                        width: 120px;
+                        margin-left: 6px;
+                      }
+
+                      .ui-invite-referral .top-content .invite-referral-area {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                        border-radius: 4px;
+                        background-color: #fff;
+                        padding: 7.5px 7.5px 7.5px 15px;
+                        margin-bottom: 20px;
+                      }
+
+                      .ui-invite-referral .top-content .invite-referral-area .invite-input {
+                        width: 100%;
+                        opacity: .5;
+                        padding: 7.5px 0 7.5px;
+                      }
+
+                      .ui-invite-referral .top-content .invite-referral-area .invite-input input {
+                        border: 0;
+                        height: 22px;
+                        vertical-align: middle;
+                        padding: 0;
+                        color: initial;
+                        opacity: .5;
+                        border-radius: 0;
+                      }
+
+                      .social-share-group {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        display: inline-block;
+                      }
+
+                      .gmail {
+                        margin-left: 40%;
+
+                      }
+
+                      .email {
+                        margin: 0px;
+                      }
+
+                      .flex-container {
+                        display: flex;
+                      }
+
+                      .flex-container>div {
+                        background-color: #f1f1f1;
+                        margin: 10px;
+                        padding: 10px;
+                        font-size: 0.8rem;
+						font-family: 'Cera Pro', sans-serif;
+                        border-radius: 50%;
+                      }
+					  
+					  .card {
+						-webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+						box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+						border: none;
+					}
+                
+				  
+				  
+@media screen and (max-width: 600px) {
+
+.col-2 {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-top: 93px;
+    padding: 4px;
+    margin: 89px 0px;
+    margin-bottom: 26px;
+}
+
+.card-img-top {
+    width: 50%;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    border-radius: 22px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.center {
+    align-items: center;
+    margin: -15px 20% 17px 18%;
+}
+
+.col-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 40%;
+    max-width: 100%;
+    padding: 107px 0;
+    margin: -228px 0 -162px 0;
+}
+}	
+
+
+
+
+@media screen and (max-width: 425px) {
+	
+	
+.card-img-top {
+    width: 100%;
+}
+
+.points1 {
+    text-align: center;
+    width: 200%;
+    margin-right: 0px;
+    margin: 0 0 0 -47%;
+    font-size: 17px;
+	font-family: 'Cera Pro', sans-serif;
+    padding: 0px;
+    color: white;
+    float: left;
+}
+}
+				  
+				  

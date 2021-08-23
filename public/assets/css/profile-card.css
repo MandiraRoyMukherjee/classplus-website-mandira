@@ -1,0 +1,78 @@
+body {
+  overflow-y: hidden;
+  overflow-x: hidden!important;
+  overflow: hidden;
+}
+
+.container{
+  margin: auto!important;
+}
+
+.prof-card{
+  padding: 30px 80px 0px !important;
+  /* padding-left: 30px!important; */
+}
+
+.prof-info{
+  font-size: 1.7em;
+}
+
+.prof-card-body{
+  width: 90%;
+  margin: 11px auto;
+  margin-top: -31px;
+}
+
+.card-img{
+  height: 50%;
+}
+
+.social-icons{
+  font-size: 1.8em;
+}
+
+i{
+  margin-right: 8px;
+}
+
+.header .text h1 {
+    overflow: hidden!important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    overflow: hidden;
+}
+
+.testWrapper .testCardWrapper .testCard {
+    overflow: hidden;
+}
+
+.joinWrapper .joinText p {
+    overflow: hidden;
+}
+
+.card-row{
+  margin-bottom: -130px;
+  max-width: 100%!important;
+}
+
+.name-info{
+  font-family: 'Oswald', sans-serif;
+  text-transform:uppercase;
+}
+
+.name-position{
+  color: #000;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+@media only screen and (max-width: 1000px) {
+  .card-img{
+    height: 30em;
+  }
+
+  .prof-card{
+    padding: 30px 30px 0px !important;
+    /* padding-left: 30px!important; */
+  }
+}

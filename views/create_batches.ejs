@@ -1,0 +1,628 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Page Title</title> 
+     <script src=" https://kit.fontawesome.com/a076d05399.js"> 
+    </script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <style> 
+    
+    #wrap {
+    background:#fff;
+    margin:20px;
+    position:fixed;
+    overflow:hidden;
+}
+
+#content {
+    width:80%;
+    padding:2.5%;
+   float:left;
+}
+     * {
+  margin: 0;
+  padding: 0;
+}
+#cards_landscape_wrap-2{
+  text-align: center;
+  background: #F7F7F7;
+}
+#cards_landscape_wrap-2 .container{
+  padding-top: 80px; 
+  padding-bottom: 100px;
+}
+#cards_landscape_wrap-2 a{
+  text-decoration: none;
+  outline: none;
+}
+#cards_landscape_wrap-2 .card-flyer {
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box{
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box img{
+  -webkit-transition:all .9s ease; 
+  -moz-transition:all .9s ease; 
+  -o-transition:all .9s ease;
+  -ms-transition:all .9s ease; 
+  width: 100%;
+  height: 200px;
+}
+#cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+  opacity: 0.7;
+  -webkit-transform:scale(1.15);
+  -moz-transform:scale(1.15);
+  -ms-transform:scale(1.15);
+  -o-transform:scale(1.15);
+  transform:scale(1.15);
+}
+#cards_landscape_wrap-2 .card-flyer .text-box{
+  text-align: center;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box .text-container {
+  padding: 30px 18px;
+}
+#cards_landscape_wrap-2 .card-flyer{
+  background: #FFFFFF;
+  margin-top: 50px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+#cards_landscape_wrap-2 .card-flyer:hover{
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin-top: 50px;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box p{
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px; 
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box h6{
+  margin-top: 0px;
+  margin-bottom: 4px; 
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Black', sans-serif;
+  letter-spacing: 1px;
+  color: #00acc1;
+}
+        .modalcss{
+	width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.modal {
+    /* display: none; Hidden by default
+    position: fixed; Stay in place */
+    display: none;
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-top: 150px;
+    padding-top: 150px;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+     /*width: 115%; */
+    height: 370px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+.hr{
+  width: 100%;
+    background-color: #a9a997;
+    height: 1px;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer; 
+}
+
+.send{
+      width: 57px;
+margin-bottom: 12px;
+    margin-top: -35px;
+            margin-left: 418px;
+}
+     * {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Hind Vadodara", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica Neue, Arial, sans-serif;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.main {
+  height: calc(100% - 50px);
+  display: flex;
+  flex: 1;
+}
+.sidebar {
+  height: 100%;
+  width: 290px;
+  box-sizing: border-box;
+  box-shadow: 0 0 2rem 0 rgb(0 0 0 / 5%);
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+.container.nav-closed .sidebar,
+.container.nav-closed .header-logo {
+  width: 0;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+}
+.sidebar ul li a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  white-space: nowrap;
+}
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background: #e8ecef;
+}
+.sidebar ul li span {
+  margin-left: 16px;
+  font-size: 16px;
+  font-weight: 100;
+}
+.sidebar ul li i {
+  font-size: 18px;
+  color: #111;
+  font-weight: normal;
+}
+.header {
+  height: 50px;
+  background: #303f9f;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+}
+.sidebar ul li a.active i {
+  color: #303f9e;
+}
+.site-logo {
+  height: 32px;
+  width: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  margin: 0 18px 0 15px;
+}
+.site-logo path {
+  fill: #fff;
+}
+.site-title {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.page-content {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+}
+.page-content h1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+}
+.header-search {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding: 0 20px;
+  flex: 1;
+}
+.header-search .button-menu {
+  width: 28px;
+  height: 28px;
+  margin-right: 15px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+.header-search input[type="search"] {
+  height: 100%;
+  width: 300px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 100;
+  background: none;
+  border: none;
+  color: #fff;
+}
+.header-search input[type="search"]:focus {
+  outline: none;
+}
+.header-search input[type="search"]::placeholder {
+  color: #ccc;
+}
+.header-search .button-menu:focus {
+  outline: none;
+  border: none;
+}
+.header-search .button-menu svg path {
+  fill: #fff;
+}
+@media screen and (max-width: 991px) {
+  .page-content {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-logo {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+  </style> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;500&display=swap" rel="stylesheet">
+
+<!-- navbar call -->
+<%- include('./partials/navbar.ejs') %>
+  <div class="main">
+<div class="page-content"> <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <div class="dropdown">
+      <a href='/admin_mail'><button class="btn btn-primary" type="button">
+        Mail to Students
+      </button></a>
+      
+    </div>
+    
+    <section class="content">
+      <div class="row mb-2">
+          <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <div class="form-outline">
+                      <input type="text" id="myInput" placeholder="Search.." onkeyup="searchFun()" />
+                  </div>
+                  </div>
+            </div>
+            
+            <button type="button" id="add_student" class="btn btn-primary">create new Batch</button>
+          </div>
+            <div class="col-sm-4">
+
+       
+            </div>
+               
+            <div id="myModal" class="modal">
+
+<!-- Modal content -->
+<div class="modal-content dialog modalcss">
+
+  <div class="bootstrap-iso">
+      <div class="container-fluid">
+       <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+     
+         <!-- Form code begins -->
+         <form method="POST" action="/create_batches">
+              <div class="form-group"> <!-- Date input -->
+                  <label class="control-label" for="BatchName">Batch Name</label><br>
+               <input class="form-control" id="BatchName" name="BatchName" placeholder="BatchName" type="text" required/>
+              </div>
+              <div class="form-group"> <!-- Date input -->
+              <label class="control-label" for="BatchCode">Batch Code</label><br>
+                  <input class="form-control" id="BatchCode" name="BatchCode" placeholder="BatchCode" type="text" required/>
+              </div>
+              <div class="form-group"> <!-- Date input -->
+                <label class="control-label" for="class">Class</label><br>
+                    <input class="form-control" id="class" name="class" placeholder="class" type="text" required/>
+                </div>
+           <div class="form-group"> <!-- Date input -->
+             <label class="control-label" for="date">Batch Start Date</label><br>
+             <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" required/>
+           </div>
+           <div class="form-group"> <!-- Submit button -->
+             <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+           </div>
+          </form>
+          <!-- Form code ends --> 
+         
+         </div>
+       </div>
+    
+       
+      </div>
+     
+     </div>
+
+    
+    
+     <!--Include jQuerry-->
+     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  
+     <!-- Include Date Range Picker -->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+     
+     <script>
+         $(document).ready(function(){
+             var date_input=$('input[name="date"]'); //our date input has the name "date"
+             var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+             date_input.datepicker({
+                 format: 'mm/dd/yyyy',
+                 container: container,
+                 todayHighlight: true,
+                 autoclose: true,
+             })
+         })
+     </script>
+  </div>
+  <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content dialog modalcss">
+            <div class="row">
+              <span style="margin-left: 10px;">Make an announcement</span><button style="margin-left: 299px;" class="close"><span class="close">&times;</span></button>
+            </div>
+            <hr class="hr">
+            <div class="row">
+               <img style="margin-top: -10px;" src="img/books.jpg" alt="books" width="70" height="70"><span style="margin-top: 10px;margin-left: 10px;">Easy Physics </span>   
+            </div>
+            <textarea ></textarea>
+            <div style="margin-top: 18px;">
+              <label for="file-upload" class="custom-file-upload">
+                <i class="fa fa-paperclip"></i> attach file
+              </label>
+              <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">
+              <label id="file-name"></label>
+            </div>
+            <hr class="hr">
+            <div class="row">
+               <input style="margin-left: 320px;" type="checkbox" id="ann" name="ann" value=""><label for="ann" style="margin-top: -6px; margin-left: 5px;"> send SMS</label>
+              <button class="btn btn-primary send" style="padding: 0px;">send</button>
+            </div>
+                </div>
+</section>
+    <!-- /.content -->
+    
+    <div class="content" >
+    <div id="cards_landscape_wrap-2" id="wrap">
+      <div class="container"  style= "height: 100vh; overflow: scroll;">
+          <div class="row"  style="overflow:scroll ;margin-right:0px;" id="myTable">
+            <% for(var branch of branchData){ %>
+              
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 tr0"  >
+                  <a href="/batch?id=<%=branch._id%>">
+                      <div class="card-flyer" >
+                          <div class="text-box Wrapper" >
+                              <div class="text-container tr" >
+                                  <h6 ><%=branch.code%></h6>
+                                  <h4>CLASS: <%=branch._class%></h4>
+                                  <p>TITLE: <%=branch.title%></p>
+                                  <p><%=branch.start_date%></p>
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+            <% } %>
+          </div>
+      </div>
+    </div>
+      <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.1.0-rc
+    </div>
+    <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+    </section>
+    <!-- /.content -->
+
+    <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("add_student");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+const searchFun=()=>{
+  let filter= document.getElementById("myInput").value.toUpperCase();
+  let myTable=document.getElementById('myTable');
+  let names=myTable.getElementsByClassName('tr0');
+  for(var i=0;i<names.length;i++){
+    let td=names[i].getElementsByClassName('tr');
+
+    if(td){
+      var tdf=td[0].getElementsByTagName('h6');
+      var textvalue=tdf[0].innerText;
+      if(textvalue.indexOf(filter) > -1){
+        names[i].style.display="";
+      }
+      else{
+        names[i].style.display="none";
+      }
+    }
+  }
+}
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+document.querySelector("#file-upload").onchange = function(){
+  document.querySelector("#file-name").textContent = this.files[0].name;
+}
+  let menuButton = document.querySelector(".button-menu");
+let container = document.querySelector(".container");
+let pageContent = document.querySelector(".page-content");
+let responsiveBreakpoint = 991;
+
+if (window.innerWidth <= responsiveBreakpoint) {
+  container.classList.add("nav-closed");
+}
+
+menuButton.addEventListener("click", function () {
+  container.classList.toggle("nav-closed");
+});
+
+pageContent.addEventListener("click", function () {
+  if (window.innerWidth <= responsiveBreakpoint) {
+    container.classList.add("nav-closed");
+  }
+});
+
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth > responsiveBreakpoint) {
+    container.classList.remove("nav-closed");
+  }
+});
+/*document.getElementById('b4').onclick = function(){
+          console.log("logout");
+          swal({
+            title: "Are you sure?",
+            text: "You want to logout!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: '#DD6B55',
+            confirmButtonText: 'Yes!',
+            closeOnConfirm: false,
+            //closeOnCancel: false
+          },
+          function(){
+            console.log('yes!!!!!!!!!')
+            
+            window.location.href = '/welcome';
+          });
+        };*/
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+</body> 
+</html> 
